@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MobileLogix - Application mobile terrain | G.A. Logix</title>
+  <meta name="description" content="MobileLogix est l'application mobile Android conçue pour le travail en forêt. Idéale pour les opérateurs, camionneurs et contremaîtres sur le terrain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-ga.png" alt="G.A. Logix">G.A. Logix Logiciels</a>
+      <nav class="nav" id="nav">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Accueil</a>
+        </li>
+        <li class="nav__item">
+          <a href="a-propos.html" class="nav__link">À propos de nous &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="membres.html">Membres fondateurs</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link nav__link--active">Solutions &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="forestlogix.html">ForestLogix</a>
+            <a href="mobilelogix.html">MobileLogix</a>
+            <a href="synclogix.html">SyncLogix</a>
+            <a href="tracklogix.html">TrackLogix</a>
+            <a href="siglogix.html">SIGLogix</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Produits & Services &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="produits.html">Nos produits</a>
+            <a href="developpement.html">Développement personnalisé</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="actualites.html" class="nav__link">Actualités</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Nous joindre</a>
+        </li>
+        <li class="nav__item nav__item--lang">
+          <a href="../en/mobilelogix.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','en')">EN</a>
+        </li>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--large">
+    <div class="hero__bg" style="background-image: url('images/hero-forest.jpg');"></div>
+    <div class="hero__content">
+      <h1>MobileLogix</h1>
+      <p>L'application mobile conçue pour le travail en forêt</p>
+      <a href="contact.html" class="btn btn--hero">Demander une démo</a>
+    </div>
+  </section>
+
+  <!-- ===== INTRODUCTION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="feature fade-up">
+        <div class="feature__text">
+          <h2>Votre compagnon mobile sur le terrain</h2>
+          <p>MobileLogix est l'application mobile Android conçue spécifiquement pour le travail en forêt. Destinée aux opérateurs d'équipement, aux camionneurs, aux mécaniciens et aux contremaîtres, elle offre un accès fiable et complet aux données opérationnelles directement sur le terrain.</p>
+          <p>Que vous soyez en zone de couverture cellulaire ou en pleine forêt sans connexion, MobileLogix vous permet de travailler efficacement grâce à la synchronisation en nuage et au mode hors ligne via Bluetooth.</p>
+        </div>
+        <div class="feature__img">
+          <img src="images/mobilelogix.png" alt="MobileLogix - Application mobile terrain">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FONCTIONNALITÉS ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-heading fade-up">
+        <h2>Fonctionnalités</h2>
+        <p>Tous les outils dont vos équipes ont besoin, directement dans leur poche</p>
+      </div>
+      <div class="columns columns--3">
+        <div class="card fade-up">
+          <h3 class="card__title">Carte et GPS</h3>
+          <p>Enregistrez vos traces GPS sur le terrain, recherchez les équipements par chantier et choisissez vos cartes de base, y compris les MbTiles personnalisées. Affichez les couches provenant de serveurs WFS, configurez la précision GPS selon vos besoins et profitez du zoom automatique pour une navigation fluide.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Outils de dessin</h3>
+          <p>Placez des marqueurs, tracez des lignes et des polygones avec calcul automatique des longueurs et des superficies. Créez des bons de travail directement à partir de la carte et prenez des photos géoréférencées pour documenter vos observations sur le terrain.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Bons de travail</h3>
+          <p>Créez des bons de travail pour les bris ou l'entretien de vos équipements. Suivez les pièces utilisées, enregistrez les heures et les kilomètres, et documentez les changements d'huile et les graissages. Tout est enregistré et synchronisé automatiquement.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Feuilles de temps</h3>
+          <p>Saisissez les heures travaillées par chantier et par équipement avec des totaux calculés automatiquement. Enregistrez les heures et les kilomètres des équipements et complétez les listes de vérification d'inspection directement depuis votre appareil mobile.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Production</h3>
+          <p>Enregistrez votre production journalière par essence et par qualité. Saisissez les volumes en m&sup3; pour les abatteuses et le nombre de voyages pour les porteurs. Une option de saisie hebdomadaire est également disponible pour simplifier le processus.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Gestion du carburant</h3>
+          <p>Enregistrez la consommation de carburant pour chaque remplissage. Suivez le transfert du réservoir source vers l'équipement de destination pour un contrôle précis de vos coûts en carburant sur chaque chantier.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Livraisons</h3>
+          <p>Créez des bordereaux de livraison avec tous les détails d'expédition nécessaires. Prenez en photo les billets de transport pour conserver une trace visuelle de chaque livraison et simplifier la vérification des paiements.</p>
+        </div>
+        <div class="card fade-up">
+          <h3 class="card__title">Synchronisation</h3>
+          <p>Profitez de la synchronisation en temps réel via le nuage lorsque la connexion internet est disponible. En zone sans couverture, la synchronisation Bluetooth bidirectionnelle entre les tablettes et les téléphones assure la continuité des opérations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMPLOYÉ ET ADMINISTRATION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="feature feature--reverse fade-up">
+        <div class="feature__text">
+          <h2>Employé et administration</h2>
+          <p>MobileLogix offre des fonctionnalités d'administration complètes pour gérer efficacement vos équipes sur le terrain.</p>
+          <ul>
+            <li>Gestion de la liste des employés pour les administrateurs</li>
+            <li>Envoi des licences et des identifiants de connexion</li>
+            <li>Licences sauvegardées dans le nuage pour une récupération facile</li>
+            <li>Authentification via compte Google ou Apple</li>
+            <li>Listes de voyages par chantier</li>
+            <li>Affichage de la précision GPS en temps réel</li>
+            <li>Accès aux documents par chantier</li>
+            <li>Écran de diagnostics système pour le dépannage</li>
+          </ul>
+        </div>
+        <div class="feature__img">
+          <img src="images/mobilelogix.png" alt="MobileLogix - Fonctionnalités d'administration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Prêt à équiper vos équipes?</h2>
+      <p>Découvrez comment MobileLogix peut améliorer l'efficacité de vos opérations sur le terrain.</p>
+      <a href="contact.html" class="btn btn--white">Contactez-nous</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>G.A. Logix Logiciels</h4>
+          <p>Spécialistes de la conception de logiciels pour les forestiers. Nous développons des solutions innovantes pour la collecte et la gestion de données forestières.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>100 route 165 Sud<br>Plessisville, Québec<br>G6L 2Y2</p>
+          <p><a href="mailto:info@galogix.com">info@galogix.com</a></p>
+          <p><a href="tel:8192522000">819-252-2000</a></p>
+        </div>
+        <div>
+          <h4>Suivez-nous</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/GALogix" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/galogix" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@GALogix" target="_blank" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 G.A. Logix Logiciels inc. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav').classList.toggle('nav--open');
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
+    });
+
+    // Scroll fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
