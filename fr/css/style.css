@@ -222,14 +222,14 @@ p { margin-bottom: 1rem; }
   background: var(--primary);
   color: var(--white);
   text-align: center;
-  padding: 7rem 2rem;
+  padding: 4.5rem 2rem;
   overflow: hidden;
-  min-height: 480px;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.hero--large { min-height: 560px; padding: 9rem 2rem; }
+.hero--large { min-height: 380px; padding: 6rem 2rem; }
 .hero::before {
   content: '';
   position: absolute;
