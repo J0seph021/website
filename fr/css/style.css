@@ -755,8 +755,27 @@ p { margin-bottom: 1rem; }
     border-radius: 0;
     opacity: 1;
     transform: none;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
-  .nav__item:hover .nav__dropdown { display: block; }
+  .nav__dropdown--open {
+    display: block;
+    max-height: 500px;
+  }
+  .nav__item:hover .nav__dropdown { display: none; }
+  .nav__item:hover .nav__dropdown--open { display: block; }
+  .nav__link--has-dropdown { display: flex; justify-content: space-between; align-items: center; }
+  .nav__link--has-dropdown .nav__chevron {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0.5rem;
+    font-size: 0.7em;
+  }
+  .nav__link--has-dropdown.nav__link--expanded .nav__chevron {
+    transform: rotate(180deg);
+  }
   .columns--2, .columns--3 { grid-template-columns: 1fr; }
   .columns--25-75 { grid-template-columns: 1fr; }
   .feature { grid-template-columns: 1fr; gap: 2rem; }
