@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FW2DLMHSMN"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FW2DLMHSMN');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forestry GPS: How to Optimize Data Collection in Boreal Forest | G.A. Logix</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <meta name="description" content="Complete guide to forestry GPS: challenges of GPS under forest canopy, GNSS multi-constellation, offline maps, forest GPS tracking and best practices for boreal forest data collection.">
+  <meta property="og:title" content="Forestry GPS: How to Optimize Data Collection in Boreal Forest | G.A. Logix">
+  <meta property="og:description" content="Optimize your GPS data collection under forest canopy: GNSS, offline maps, government layers and GIS integration for Canadian forestry operations.">
+  <meta property="og:image" content="https://www.galogix.ca/images/logo-ga.png">
+  <meta property="og:url" content="https://www.galogix.ca/en/guide-forestry-gps.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-gps-forestier.html">
+  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-gps.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="../images/logo-ga.png" alt="G.A. Logix">G.A. Logix Software</a>
+      <nav class="nav" id="nav">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="a-propos.html" class="nav__link">About Us &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="membres.html">Founding Members</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="solutions.html" class="nav__link">Solutions &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="forestlogix.html">ForestLogix</a>
+            <a href="mobilelogix.html">MobileLogix</a>
+            <a href="synclogix.html">SyncLogix</a>
+            <a href="tracklogix.html">TrackLogix</a>
+            <a href="siglogix.html">SIGLogix</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="produits.html" class="nav__link">Products &amp; Services &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="produits.html">Our Products</a>
+            <a href="developpement.html">Custom Development</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="actualites.html" class="nav__link nav__link--active">News</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Contact Us</a>
+        </li>
+        <li class="nav__item nav__item--lang">
+          <a href="../fr/guide-gps-forestier.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','fr')">FR</a>
+        </li>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('../images/hero-forest.jpg');"></div>
+    <div class="hero__content">
+      <h1>Forestry GPS: Optimizing Data Collection in Boreal Forest</h1>
+      <p>Precision, reliability and performance under the forest canopy</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="article fade-up">
+
+        <a href="actualites.html" class="article__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to News
+        </a>
+
+        <div class="article__meta">
+          <span class="article__tag">Guide</span>
+          <span>March 23, 2026</span>
+        </div>
+
+        <img src="../images/blog-forestlogix.png" alt="Forestry GPS - Data Collection in Boreal Forest" class="article__img">
+
+        <p><strong>GPS data collection in the forest</strong> represents a unique challenge that professionals from other industries often struggle to understand. Under the dense canopy of the Canadian boreal forest, satellite signals are attenuated, reflected and sometimes completely blocked. Yet, positioning accuracy is critical for delineating cutting areas, respecting buffer zones, mapping forest roads and documenting operations for government compliance. This guide explores the specific challenges of <strong>forestry GPS</strong> and the solutions that deliver reliable data even in the most difficult conditions.</p>
+
+        <h2>The challenges of GPS under the boreal forest canopy</h2>
+        <p>The Canadian boreal forest poses considerable obstacles to satellite signal reception. Understanding these challenges is the first step toward overcoming them.</p>
+        <h3>Canopy attenuation</h3>
+        <p>Dense stands of black spruce, balsam fir and jack pine create a <strong>forest canopy</strong> that can attenuate GPS signals by 10 to 20 dB. In winter, when snow accumulates on the branches, attenuation can be even greater. This signal loss translates directly into a reduced number of visible satellites and, consequently, degraded accuracy.</p>
+        <h3>Multipath effect in rugged terrain</h3>
+        <p>Narrow valleys, rock outcrops and mountain slopes characteristic of the Canadian Shield cause satellite signal reflections, a phenomenon called <strong>multipath</strong>. The GPS receiver picks up the same signal via multiple paths, creating positioning errors that can reach several metres. Ravines and topographic depressions are particularly problematic.</p>
+        <h3>Extreme weather conditions</h3>
+        <p>Forestry operations in Canada take place in conditions ranging from -40 degrees Celsius in winter to scorching summer days, along with torrential rains in spring and fall. GPS equipment must not only survive these conditions but maintain consistent accuracy. Extreme cold affects battery performance and can slow the initial satellite fix time.</p>
+
+        <h2>Types of GPS for forestry</h2>
+        <p>Several categories of GPS devices are used in forestry, each with its own advantages and limitations:</p>
+        <h3>Handheld field GPS units</h3>
+        <p>Handheld GPS receivers from brands like Garmin remain popular for their ruggedness and simplicity. However, their accuracy is generally limited to 3-5 metres in open areas and can degrade considerably under <strong>forest canopy</strong>. Furthermore, transferring data to a computer system requires manual steps that slow down workflow.</p>
+        <h3>Rugged tablets with integrated GPS</h3>
+        <p>Rugged tablets offer the advantage of combining GPS with a comprehensive <strong>forestry GPS software</strong> application. Data entry, map visualization and positioning all happen on the same device, eliminating manual transfers. Their touchscreens facilitate interaction with maps and forms, even when wearing work gloves.</p>
+        <h3>External Bluetooth SPP GPS receivers</h3>
+        <p>To improve accuracy beyond what a tablet's built-in GPS can offer, <strong>external Bluetooth SPP GPS receivers</strong> (Serial Port Profile) represent the best option. Devices such as the Bad Elf GNSS Surveyor or Emlid receivers offer sub-metre accuracy by connecting wirelessly to the tablet. The SPP protocol transmits NMEA data in real time, allowing the field software to leverage much more precise positioning than the built-in GPS.</p>
+
+        <h2>GNSS vs GPS: why multi-constellation matters in the forest</h2>
+        <p>The term <strong>GPS</strong> specifically refers to the American satellite navigation system. The term <strong>GNSS</strong> (Global Navigation Satellite System) encompasses all available satellite constellations: GPS (United States), GLONASS (Russia), Galileo (Europe) and BeiDou (China). Under a dense forest canopy, the difference is significant.</p>
+        <p>A GPS-only receiver has access to approximately 30 orbiting satellites. A <strong>multi-constellation GNSS</strong> receiver accesses over 120 satellites across four systems. Under the canopy, where only a fraction of satellites are visible, this multiplication of signal sources can mean the difference between a reliable 3D fix and an inability to determine position. In dense boreal forest, testing shows that a multi-GNSS receiver maintains a fix in conditions where a GPS-only receiver loses lock entirely.</p>
+
+        <h2>Essential mapping features for forestry field work</h2>
+        <h3>Offline maps and MbTiles format</h3>
+        <p>Without internet connectivity in the forest, online maps are useless. The <strong>MbTiles</strong> format allows map tiles to be stored directly on the device for instant access, even deep in the forest. Detailed maps of each operating area can be prepared before heading to the field, including satellite imagery, contour lines and cadastral boundaries.</p>
+        <h3>Government WMS and WMTS layers</h3>
+        <p>Provincial governments make rich cartographic layers available via <strong>WMTS</strong> services: lot boundaries, protected areas, hydrography, forest roads, eco-forest inventory and much more. A good <strong>forestry GPS software</strong> must be able to display these layers overlaid with field data, allowing operators to see their position in real time relative to regulatory boundaries.</p>
+
+        <h2>Best practices for maximizing GPS accuracy in the forest</h2>
+        <p>Beyond equipment selection, certain field practices considerably improve GPS data quality. Using precision filters, averaging multiple positions on the same point, choosing optimal time windows and correctly positioning the antenna are all techniques that make a difference. For a detailed guide to these practices, see our article on <a href="blog-gps-pratiques.html"><strong>GPS best practices in forestry</strong></a>.</p>
+
+        <h2>The GPS capabilities of MobileLogix and ForestLogix</h2>
+        <p><a href="mobilelogix.html"><strong>MobileLogix</strong></a> was designed from the ground up for the challenges of <strong>GPS under forest canopy</strong>. The application supports external GNSS receivers via Bluetooth SPP, displays offline MbTiles maps, integrates government WMTS layers and offers configurable precision filtering tools. Automatic GPS track recording with timestamps documents every movement on the job site.</p>
+        <p><a href="forestlogix.html"><strong>ForestLogix</strong></a>, on the office side, centralizes all GPS data collected in the field and displays it on a complete mapping interface. Managers can visualize all tracks, waypoints and georeferenced zones from every job site in a single dashboard.</p>
+        <p>For reforestation operations, <a href="tracklogix.html"><strong>TrackLogix</strong></a> offers specialized <strong>forest GPS tracking</strong> that maps planted areas, calculates acreage and documents reforestation progress in real time.</p>
+
+        <h2>Integration with GIS tools: QGIS and ArcGIS</h2>
+        <p>GPS data collected in the field does not exist in a vacuum. It must integrate with the geographic information systems (GIS) used by forest engineers and planners. <a href="siglogix.html"><strong>SIGLogix</strong></a> facilitates this integration by enabling data export to <strong>QGIS</strong> and <strong>ArcGIS</strong> in standard formats (Shapefile, GeoJSON, GeoPackage). GPS tracks, waypoints and polygons collected with MobileLogix can be directly imported into GIS projects for spatial analysis, thematic map production and planning of future operations.</p>
+        <p>Bidirectional interoperability means that planners can also prepare data layers in QGIS or ArcGIS and transfer them to field tablets to guide operators in their daily work.</p>
+
+        <h2>Optimize your GPS data collection now</h2>
+        <p>The quality of GPS data determines the quality of all downstream decisions: cut planning, regulatory compliance, volume calculations and billing. Investing in the right equipment and the right <strong>forestry GPS software</strong> is an investment in the reliability of your entire operation.</p>
+        <p>The G.A. Logix team has deep expertise in forestry geomatics and can help you choose the solution adapted to your needs. <a href="contact.html"><strong>Contact us</strong></a> to discuss your GPS challenges and discover how our solutions can improve the accuracy and efficiency of your forest data collection.</p>
+
+        <!-- RELATED GUIDES -->
+        <div class="related-posts fade-up">
+          <h3>Related Guides</h3>
+          <div class="columns columns--3">
+            <div class="related-post-card">
+              <h4><a href="guide-forestry-software.html">Forestry Management Software: The Complete Guide</a></h4>
+              <div class="blog-card__meta"><span>March 23, 2026</span> &middot; <span>Guide</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="guide-forestry-contractor.html">Digital Solutions for Forestry Contractors</a></h4>
+              <div class="blog-card__meta"><span>March 23, 2026</span> &middot; <span>Guide</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="guide-field-data-collection.html">Field Data Collection in Forestry: From Paper to Digital</a></h4>
+              <div class="blog-card__meta"><span>March 23, 2026</span> &middot; <span>Guide</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Interested in our solutions?</h2>
+      <p>Contact us for a personalized demonstration.</p>
+      <a href="contact.html" class="btn btn--white">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>G.A. Logix Software</h4>
+          <p>Specialists in software design for the forestry industry. We develop innovative solutions for forestry data collection and management.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>100 Route 165 South<br>Plessisville, Quebec<br>G6L 2Y2</p>
+          <p><a href="mailto:info@galogix.com">info@galogix.com</a></p>
+          <p><a href="tel:8192522000">819-252-2000</a></p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/GALogix" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/galogix" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@GALogix" target="_blank" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 G.A. Logix Logiciels inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav').classList.toggle('nav--open');
+    });
+    window.addEventListener('scroll', function() {
+      document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
