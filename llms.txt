@@ -1,0 +1,29 @@
+# G.A. Logix Software
+
+> G.A. Logix is a Canadian software company based in Plessisville, Quebec, specializing in forestry operations management software.
+
+## Products
+
+- **ForestLogix**: Comprehensive forestry operations management platform available on Windows desktop, Windows tablet, Android, and iPhone. Features include GPS tracking, mapping with LiDAR/MbTiles, worksite management, fleet management, timesheet tracking, fuel management, delivery tracking, and real-time cloud synchronization.
+- **MobileLogix**: Mobile field application for Android with AI-powered forestry chatbot, voice reading, automatic report generation, GPS Bluetooth SPP, Material Design 3 interface, and multi-company management.
+- **SyncLogix**: Real-time data synchronization engine between field devices and office, supporting cloud sync and offline Bluetooth sync.
+- **TrackLogix**: Reforestation tracking application using connected smartwatches to automatically collect GPS data from tree planters, generating instant production reports without paperwork.
+- **SIGLogix**: GIS integration tool for ArcMap/ArcGIS Pro with WFS publishing, symbology support (QGIS .qml, ArcMap .lyr, ArcGIS Pro .lyrx), and MbTiles creation.
+
+## Services
+
+- Complete forestry software solutions
+- Rugged Windows and Android tablets for field use
+- Custom software development for forestry operations
+- GIS integration consulting
+
+## Contact
+
+- Website: https://www.galogix.ca
+- Email: info@galogix.com
+- Phone: 819-998-3881
+- Address: 100 Route 165 South, Plessisville, QC, G6L 2Y2, Canada
+
+## Key Clients
+
+Domtar, PrimeWood, ForexWood, Goforest, Ray R. Caron, Gestiboa, Groupements forestiers Québec
