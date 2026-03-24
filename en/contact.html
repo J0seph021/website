@@ -288,6 +288,7 @@
     // ===== LEAD FORM =====
     (function() {
       var CRM_API_URL = 'https://galogix-crm.onrender.com/api/public/lead';
+      var WEB3FORMS_KEY = '06a521eb-250e-4849-8b87-fec66c372748';
 
       var form = document.getElementById('leadFormEl');
       var submitBtn = document.getElementById('submitBtn');
@@ -400,23 +401,61 @@
           }
         })
         .catch(function() {
-          // Fallback: send by email with pre-filled data
+          // Fallback 1: send silently via Web3Forms
           var typeLabel = data.requestType === 'demo' ? 'Demo Request' : 'General Inquiry';
-          var subject = encodeURIComponent('[Website] ' + typeLabel + ' — ' + data.companyName);
-          var body = encodeURIComponent(
-            'Request type: ' + typeLabel + '\n' +
-            'Company: ' + data.companyName + '\n' +
-            'Name: ' + data.firstName + ' ' + data.lastName + '\n' +
-            'Email: ' + data.email + '\n' +
-            'Phone: ' + (data.phone || 'Not provided') + '\n' +
-            'Client type: ' + (data.clientType || 'Not specified') + '\n' +
-            (data.product ? 'Product of interest: ' + data.product + '\n' : '') +
-            '\nMessage:\n' + (data.message || 'No message') + '\n'
-          );
-          var mailtoLink = 'mailto:info@galogix.com?subject=' + subject + '&body=' + body;
-          window.location.href = mailtoLink;
-          formFallback.style.display = '';
-          document.getElementById('fallbackLink').href = mailtoLink;
+          return fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_KEY,
+              subject: '[Website] ' + typeLabel + ' — ' + data.companyName,
+              from_name: data.firstName + ' ' + data.lastName,
+              email: data.email,
+              'Request type': typeLabel,
+              'Company': data.companyName,
+              'Full name': data.firstName + ' ' + data.lastName,
+              'Email': data.email,
+              'Phone': data.phone || 'Not provided',
+              'Client type': data.clientType || 'Not specified',
+              'Product of interest': data.product || 'N/A',
+              'Message': data.message || 'No message',
+              'Source': data.source
+            })
+          })
+          .then(function(res) {
+            if (!res.ok) throw new Error('Web3Forms error');
+            return res.json();
+          })
+          .then(function(result) {
+            if (!result.success) throw new Error('Web3Forms failed');
+            form.style.display = 'none';
+            formSuccess.style.display = '';
+            if (typeof gtag === 'function') {
+              gtag('event', 'lead_form_submit', {
+                event_category: 'engagement',
+                event_label: data.requestType + '_email_fallback',
+                value: data.requestType === 'demo' ? 2 : 1
+              });
+            }
+          })
+          .catch(function() {
+            // Fallback 2: open mailto as last resort
+            var subject = encodeURIComponent('[Website] ' + typeLabel + ' — ' + data.companyName);
+            var body = encodeURIComponent(
+              'Request type: ' + typeLabel + '\n' +
+              'Company: ' + data.companyName + '\n' +
+              'Name: ' + data.firstName + ' ' + data.lastName + '\n' +
+              'Email: ' + data.email + '\n' +
+              'Phone: ' + (data.phone || 'Not provided') + '\n' +
+              'Client type: ' + (data.clientType || 'Not specified') + '\n' +
+              (data.product ? 'Product of interest: ' + data.product + '\n' : '') +
+              '\nMessage:\n' + (data.message || 'No message') + '\n'
+            );
+            var mailtoLink = 'mailto:info@galogix.com?subject=' + subject + '&body=' + body;
+            window.location.href = mailtoLink;
+            formFallback.style.display = '';
+            document.getElementById('fallbackLink').href = mailtoLink;
+          });
         })
         .finally(function() {
           submitBtn.classList.remove('btn--loading');

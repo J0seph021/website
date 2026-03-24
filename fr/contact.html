@@ -288,6 +288,7 @@
     // ===== LEAD FORM =====
     (function() {
       var CRM_API_URL = 'https://galogix-crm.onrender.com/api/public/lead';
+      var WEB3FORMS_KEY = '06a521eb-250e-4849-8b87-fec66c372748';
 
       var form = document.getElementById('leadFormEl');
       var submitBtn = document.getElementById('submitBtn');
@@ -403,25 +404,62 @@
           }
         })
         .catch(function() {
-          // Fallback : envoyer par courriel avec les données pré-remplies
+          // Fallback 1 : envoyer silencieusement via Web3Forms
           var typeLabel = data.requestType === 'demo' ? 'Demande de démonstration' : 'Contact général';
-          var subject = encodeURIComponent('[Site Web] ' + typeLabel + ' — ' + data.companyName);
-          var body = encodeURIComponent(
-            'Type de demande: ' + typeLabel + '\n' +
-            'Entreprise: ' + data.companyName + '\n' +
-            'Nom: ' + data.firstName + ' ' + data.lastName + '\n' +
-            'Courriel: ' + data.email + '\n' +
-            'Téléphone: ' + (data.phone || 'Non fourni') + '\n' +
-            'Type de client: ' + (data.clientType || 'Non spécifié') + '\n' +
-            (data.product ? 'Produit d\'intérêt: ' + data.product + '\n' : '') +
-            '\nMessage:\n' + (data.message || 'Aucun message') + '\n'
-          );
-          var mailtoLink = 'mailto:info@galogix.com?subject=' + subject + '&body=' + body;
-          // Ouvrir le mailto automatiquement
-          window.location.href = mailtoLink;
-          // Afficher aussi le fallback au cas où le mailto ne s'ouvre pas
-          formFallback.style.display = '';
-          document.getElementById('fallbackLink').href = mailtoLink;
+          return fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_KEY,
+              subject: '[Site Web] ' + typeLabel + ' — ' + data.companyName,
+              from_name: data.firstName + ' ' + data.lastName,
+              email: data.email,
+              'Type de demande': typeLabel,
+              'Entreprise': data.companyName,
+              'Nom complet': data.firstName + ' ' + data.lastName,
+              'Courriel': data.email,
+              'Téléphone': data.phone || 'Non fourni',
+              'Type de client': data.clientType || 'Non spécifié',
+              'Produit d\'intérêt': data.product || 'N/A',
+              'Message': data.message || 'Aucun message',
+              'Source': data.source
+            })
+          })
+          .then(function(res) {
+            if (!res.ok) throw new Error('Web3Forms error');
+            return res.json();
+          })
+          .then(function(result) {
+            if (!result.success) throw new Error('Web3Forms failed');
+            // Succès via Web3Forms
+            form.style.display = 'none';
+            formSuccess.style.display = '';
+            if (typeof gtag === 'function') {
+              gtag('event', 'lead_form_submit', {
+                event_category: 'engagement',
+                event_label: data.requestType + '_email_fallback',
+                value: data.requestType === 'demo' ? 2 : 1
+              });
+            }
+          })
+          .catch(function() {
+            // Fallback 2 : ouvrir mailto en dernier recours
+            var subject = encodeURIComponent('[Site Web] ' + typeLabel + ' — ' + data.companyName);
+            var body = encodeURIComponent(
+              'Type de demande: ' + typeLabel + '\n' +
+              'Entreprise: ' + data.companyName + '\n' +
+              'Nom: ' + data.firstName + ' ' + data.lastName + '\n' +
+              'Courriel: ' + data.email + '\n' +
+              'Téléphone: ' + (data.phone || 'Non fourni') + '\n' +
+              'Type de client: ' + (data.clientType || 'Non spécifié') + '\n' +
+              (data.product ? 'Produit d\'intérêt: ' + data.product + '\n' : '') +
+              '\nMessage:\n' + (data.message || 'Aucun message') + '\n'
+            );
+            var mailtoLink = 'mailto:info@galogix.com?subject=' + subject + '&body=' + body;
+            window.location.href = mailtoLink;
+            formFallback.style.display = '';
+            document.getElementById('fallbackLink').href = mailtoLink;
+          });
         })
         .finally(function() {
           submitBtn.classList.remove('btn--loading');
