@@ -113,12 +113,112 @@
     </div>
   </section>
 
-  <!-- QUOTE REQUEST -->
-  <section class="section section--gray fade-up">
+  <!-- CONTACT / DEMO FORM -->
+  <section class="section section--gray fade-up" id="form">
     <div class="container text-center">
-      <h2>Request a Quote</h2>
-      <p>Would you like to receive a quote for one of our products or services? Our team will be happy to assist you and prepare an offer tailored to your needs. Feel free to write to us to tell us about your project.</p>
-      <a href="mailto:info@galogix.com" class="btn btn--primary">Contact us by email</a>
+      <h2>Request a Quote or Demo</h2>
+      <p>Would you like to receive a quote or see our software in action? Fill out the form below and our team will get back to you promptly.</p>
+
+      <div class="lead-form" id="leadForm">
+        <form id="leadFormEl" novalidate>
+
+          <div class="form-group">
+            <label class="form-label">Request Type</label>
+            <div class="form-radio-group">
+              <label class="form-radio">
+                <input type="radio" name="requestType" value="contact" checked>
+                General Inquiry
+              </label>
+              <label class="form-radio">
+                <input type="radio" name="requestType" value="demo" id="radioDemo">
+                Request a Demo
+              </label>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label class="form-label" for="companyName">Company Name <span class="required">*</span></label>
+              <input type="text" id="companyName" name="companyName" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name <span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name <span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="clientType">Client Type</label>
+              <select id="clientType" name="clientType" class="form-input">
+                <option value="">-- Select --</option>
+                <option value="scierie">Sawmill</option>
+                <option value="pepiniere">Nursery</option>
+                <option value="municipalite">Municipality</option>
+                <option value="entrepreneur">Forestry Contractor</option>
+                <option value="autre">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="productGroup" style="display:none;">
+              <label class="form-label" for="product">Product of Interest</label>
+              <select id="product" name="product" class="form-input">
+                <option value="">-- Select --</option>
+                <option value="ForestLogix">ForestLogix</option>
+                <option value="MobileLogix">MobileLogix</option>
+                <option value="SyncLogix">SyncLogix</option>
+                <option value="TrackLogix">TrackLogix</option>
+                <option value="SIGLogix">SIGLogix</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" name="message" class="form-input" rows="4" placeholder="Describe your project or needs..."></textarea>
+            </div>
+          </div>
+
+          <!-- Honeypot anti-spam -->
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary" id="submitBtn">Send Request</button>
+          </div>
+        </form>
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <div class="form-success__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Request Sent Successfully!</h3>
+          <p>Our team will contact you shortly. Thank you for your interest!</p>
+        </div>
+
+        <!-- Error / Fallback -->
+        <div class="form-fallback" id="formFallback" style="display:none;">
+          <p>An error occurred while sending. Please try again or contact us directly.</p>
+          <a href="mailto:info@galogix.com" class="btn btn--primary">Contact us by email</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -184,6 +284,129 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ===== LEAD FORM =====
+    (function() {
+      var CRM_API_URL = 'https://VOTRE-CRM-URL/api/public/lead';
+
+      var form = document.getElementById('leadFormEl');
+      var submitBtn = document.getElementById('submitBtn');
+      var formSuccess = document.getElementById('formSuccess');
+      var formFallback = document.getElementById('formFallback');
+      var productGroup = document.getElementById('productGroup');
+      var radios = document.querySelectorAll('input[name="requestType"]');
+
+      // Show/hide product field based on type
+      radios.forEach(function(r) {
+        r.addEventListener('change', function() {
+          productGroup.style.display = this.value === 'demo' ? '' : 'none';
+        });
+      });
+
+      // Pre-select demo if #demo in URL
+      if (window.location.hash === '#demo') {
+        var radioDemo = document.getElementById('radioDemo');
+        if (radioDemo) {
+          radioDemo.checked = true;
+          productGroup.style.display = '';
+        }
+        setTimeout(function() {
+          document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
+
+      // Validation
+      function validateForm() {
+        var valid = true;
+        form.querySelectorAll('.form-input--error').forEach(function(el) { el.classList.remove('form-input--error'); });
+        form.querySelectorAll('.form-error').forEach(function(el) { el.remove(); });
+
+        var required = [
+          { id: 'companyName', msg: 'Company name is required' },
+          { id: 'firstName', msg: 'First name is required' },
+          { id: 'lastName', msg: 'Last name is required' },
+          { id: 'email', msg: 'Email is required' }
+        ];
+
+        required.forEach(function(field) {
+          var input = document.getElementById(field.id);
+          if (!input.value.trim()) {
+            input.classList.add('form-input--error');
+            var err = document.createElement('div');
+            err.className = 'form-error';
+            err.textContent = field.msg;
+            input.parentNode.appendChild(err);
+            valid = false;
+          }
+        });
+
+        var emailInput = document.getElementById('email');
+        if (emailInput.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+          emailInput.classList.add('form-input--error');
+          var err = document.createElement('div');
+          err.className = 'form-error';
+          err.textContent = 'Please enter a valid email address';
+          emailInput.parentNode.appendChild(err);
+          valid = false;
+        }
+
+        return valid;
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Honeypot check
+        if (document.getElementById('website').value) return;
+
+        if (!validateForm()) return;
+
+        var requestType = form.querySelector('input[name="requestType"]:checked').value;
+
+        var data = {
+          requestType: requestType,
+          companyName: document.getElementById('companyName').value.trim(),
+          firstName: document.getElementById('firstName').value.trim(),
+          lastName: document.getElementById('lastName').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          clientType: document.getElementById('clientType').value,
+          product: requestType === 'demo' ? document.getElementById('product').value : '',
+          message: document.getElementById('message').value.trim(),
+          source: 'website-en'
+        };
+
+        submitBtn.classList.add('btn--loading');
+        formFallback.style.display = 'none';
+
+        fetch(CRM_API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+        .then(function(res) {
+          if (!res.ok) throw new Error('Server error');
+          return res.json();
+        })
+        .then(function() {
+          form.style.display = 'none';
+          formSuccess.style.display = '';
+          if (typeof gtag === 'function') {
+            gtag('event', 'lead_form_submit', {
+              event_category: 'engagement',
+              event_label: requestType,
+              value: requestType === 'demo' ? 2 : 1
+            });
+          }
+        })
+        .catch(function() {
+          formFallback.style.display = '';
+        })
+        .finally(function() {
+          submitBtn.classList.remove('btn--loading');
+        });
+      });
+    })();
   </script>
 
 </body>
