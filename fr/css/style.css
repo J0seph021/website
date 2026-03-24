@@ -662,8 +662,8 @@ p { margin-bottom: 1rem; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
   color: var(--white);
@@ -790,6 +790,9 @@ p { margin-bottom: 1rem; }
   h1 { font-size: 2rem; }
   h2 { font-size: 1.7rem; }
   .section { padding: 3.5rem 0; }
+  .btn { padding: 0.9rem 2.2rem; min-height: 44px; }
+  .nav__link--lang { padding: 0.45rem 1rem !important; min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  .tag, .article__tag, .meta, .article__meta { font-size: 0.875rem; }
 }
 
 @media (max-width: 480px) {
