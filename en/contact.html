@@ -215,8 +215,8 @@
 
         <!-- Error / Fallback -->
         <div class="form-fallback" id="formFallback" style="display:none;">
-          <p>An error occurred while sending. Please try again or contact us directly.</p>
-          <a href="mailto:info@galogix.com" class="btn btn--primary">Contact us by email</a>
+          <p>Your email client should open automatically. If not, click below.</p>
+          <a href="mailto:info@galogix.com" id="fallbackLink" class="btn btn--primary">Send by email</a>
         </div>
       </div>
     </div>
@@ -400,7 +400,23 @@
           }
         })
         .catch(function() {
+          // Fallback: send by email with pre-filled data
+          var typeLabel = data.requestType === 'demo' ? 'Demo Request' : 'General Inquiry';
+          var subject = encodeURIComponent('[Website] ' + typeLabel + ' — ' + data.companyName);
+          var body = encodeURIComponent(
+            'Request type: ' + typeLabel + '\n' +
+            'Company: ' + data.companyName + '\n' +
+            'Name: ' + data.firstName + ' ' + data.lastName + '\n' +
+            'Email: ' + data.email + '\n' +
+            'Phone: ' + (data.phone || 'Not provided') + '\n' +
+            'Client type: ' + (data.clientType || 'Not specified') + '\n' +
+            (data.product ? 'Product of interest: ' + data.product + '\n' : '') +
+            '\nMessage:\n' + (data.message || 'No message') + '\n'
+          );
+          var mailtoLink = 'mailto:info@galogix.com?subject=' + subject + '&body=' + body;
+          window.location.href = mailtoLink;
           formFallback.style.display = '';
+          document.getElementById('fallbackLink').href = mailtoLink;
         })
         .finally(function() {
           submitBtn.classList.remove('btn--loading');

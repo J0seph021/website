@@ -215,8 +215,8 @@
 
         <!-- Erreur / Fallback -->
         <div class="form-fallback" id="formFallback" style="display:none;">
-          <p>Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement.</p>
-          <a href="mailto:info@galogix.com" class="btn btn--primary">Contactez-nous par courriel</a>
+          <p>Votre client courriel devrait s'ouvrir automatiquement. Sinon, cliquez ci-dessous.</p>
+          <a href="mailto:info@galogix.com" id="fallbackLink" class="btn btn--primary">Envoyer par courriel</a>
         </div>
       </div>
     </div>
@@ -403,7 +403,25 @@
           }
         })
         .catch(function() {
+          // Fallback : envoyer par courriel avec les données pré-remplies
+          var typeLabel = data.requestType === 'demo' ? 'Demande de démonstration' : 'Contact général';
+          var subject = encodeURIComponent('[Site Web] ' + typeLabel + ' — ' + data.companyName);
+          var body = encodeURIComponent(
+            'Type de demande: ' + typeLabel + '\n' +
+            'Entreprise: ' + data.companyName + '\n' +
+            'Nom: ' + data.firstName + ' ' + data.lastName + '\n' +
+            'Courriel: ' + data.email + '\n' +
+            'Téléphone: ' + (data.phone || 'Non fourni') + '\n' +
+            'Type de client: ' + (data.clientType || 'Non spécifié') + '\n' +
+            (data.product ? 'Produit d\'intérêt: ' + data.product + '\n' : '') +
+            '\nMessage:\n' + (data.message || 'Aucun message') + '\n'
+          );
+          var mailtoLink = 'mailto:info@galogix.com?subject=' + subject + '&body=' + body;
+          // Ouvrir le mailto automatiquement
+          window.location.href = mailtoLink;
+          // Afficher aussi le fallback au cas où le mailto ne s'ouvre pas
           formFallback.style.display = '';
+          document.getElementById('fallbackLink').href = mailtoLink;
         })
         .finally(function() {
           submitBtn.classList.remove('btn--loading');
