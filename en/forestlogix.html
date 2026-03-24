@@ -98,7 +98,7 @@
           <p>With real-time cloud synchronization and offline Bluetooth synchronization, your teams stay connected even in the most remote areas. All information flows automatically between the office, equipment-mounted tablets, and operators' mobile devices.</p>
         </div>
         <div class="feature__img">
-          <img src="../images/forestlogix-cabine.jpg" alt="ForestLogix in forestry equipment cabin" class="fade-up" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
+          <img src="images/forestlogix-cabine.jpg" alt="ForestLogix in forestry equipment cabin" class="fade-up" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);">
           <img src="images/forestlogix.png" alt="ForestLogix - Forestry management platform">
         </div>
       </div>
@@ -301,7 +301,42 @@
     // Mobile menu toggle
     document.getElementById('hamburger').addEventListener('click', function () {
       document.getElementById('nav').classList.toggle('nav--open');
+      // Close all open dropdowns when closing the menu
+      if (!document.getElementById('nav').classList.contains('nav--open')) {
+        document.querySelectorAll('.nav__dropdown--open').forEach(function(d) {
+          d.classList.remove('nav__dropdown--open');
+        });
+        document.querySelectorAll('.nav__link--expanded').forEach(function(l) {
+          l.classList.remove('nav__link--expanded');
+        });
+      }
     });
+
+    // Mobile dropdown toggle
+    (function() {
+      var isMobile = function() { return window.innerWidth <= 768; };
+      document.querySelectorAll('.nav__item').forEach(function(item) {
+        var dropdown = item.querySelector('.nav__dropdown');
+        if (!dropdown) return;
+        var link = item.querySelector('.nav__link');
+        link.addEventListener('click', function(e) {
+          if (!isMobile()) return;
+          if (!dropdown.classList.contains('nav__dropdown--open')) {
+            // Close other open dropdowns
+            document.querySelectorAll('.nav__dropdown--open').forEach(function(d) {
+              d.classList.remove('nav__dropdown--open');
+            });
+            document.querySelectorAll('.nav__link--expanded').forEach(function(l) {
+              l.classList.remove('nav__link--expanded');
+            });
+            // Open this dropdown
+            dropdown.classList.add('nav__dropdown--open');
+            link.classList.add('nav__link--expanded');
+            e.preventDefault();
+          }
+        });
+      });
+    })();
 
     // Header scroll effect
     window.addEventListener('scroll', function() {

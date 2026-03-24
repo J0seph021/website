@@ -24,14 +24,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container">
-      <a href="index.html" class="logo"><img src="../images/logo-ga.png" alt="G.A. Logix">G.A. Logix Software</a>
+      <a href="index.html" class="logo"><img src="images/logo-ga.png" alt="G.A. Logix">G.A. Logix Software</a>
       <nav class="nav" id="nav">
         <li class="nav__item">
           <a href="index.html" class="nav__link">Home</a>
@@ -80,7 +80,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero__bg" style="background-image: url('../images/hero-forest.jpg');"></div>
+    <div class="hero__bg" style="background-image: url('images/hero-forest.jpg');"></div>
     <div class="hero__content">
       <h1>Field Data Collection in Forestry</h1>
       <p>From paper to digital: modernize your field processes</p>
@@ -102,7 +102,7 @@
           <span>March 23, 2026</span>
         </div>
 
-        <img src="../images/blog-forestlogix.png" alt="Field Data Collection in Forestry - From Paper to Digital" class="article__img">
+        <img src="images/blog-forestlogix.png" alt="Field Data Collection in Forestry - From Paper to Digital" class="article__img">
 
         <p>For decades, <strong>field data collection in forestry</strong> across Canada was done the same way: field notebooks, pre-printed paper forms, handheld GPS units and overflowing filing cabinets at the office. This model worked, but at an enormous cost in time, errors and inefficiency. Today, the transition to digital <strong>forest data collection apps</strong> is well underway, and companies that embrace it are discovering productivity gains they would not have thought possible. This guide details everything you need to know to successfully make the transition.</p>
 
@@ -226,7 +226,31 @@
   <script>
     document.getElementById('hamburger').addEventListener('click', function () {
       document.getElementById('nav').classList.toggle('nav--open');
+      if (!document.getElementById('nav').classList.contains('nav--open')) {
+        document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+        document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+      }
     });
+
+    // Mobile dropdown toggle
+    (function() {
+      var isMobile = function() { return window.innerWidth <= 768; };
+      document.querySelectorAll('.nav__item').forEach(function(item) {
+        var dropdown = item.querySelector('.nav__dropdown');
+        if (!dropdown) return;
+        var link = item.querySelector('.nav__link');
+        link.addEventListener('click', function(e) {
+          if (!isMobile()) return;
+          if (!dropdown.classList.contains('nav__dropdown--open')) {
+            document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+            document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+            dropdown.classList.add('nav__dropdown--open');
+            link.classList.add('nav__link--expanded');
+            e.preventDefault();
+          }
+        });
+      });
+    })();
     window.addEventListener('scroll', function() {
       document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
     });
