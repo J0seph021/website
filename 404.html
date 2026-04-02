@@ -12,6 +12,31 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="robots" content="noindex">
+  <script>
+    // Redirect known old URLs to their new locations
+    (function() {
+      var path = window.location.pathname.toLowerCase().replace(/\/+$/, '');
+      var lang = (localStorage.getItem('galogix-lang') || navigator.language || 'fr').toLowerCase();
+      var isFr = lang.startsWith('fr');
+      var redirects = {
+        '/services': isFr ? '/fr/services.html' : '/en/services.html',
+        '/accueil': '/fr/index.html',
+        '/a-propos-de-nous/membres-fondateurs': isFr ? '/fr/membres.html' : '/en/membres.html',
+        '/\u00e0-propos-de-nous/membres-fondateurs': isFr ? '/fr/membres.html' : '/en/membres.html',
+        '/membres-fondateurs': isFr ? '/fr/membres.html' : '/en/membres.html',
+        '/a-propos': isFr ? '/fr/a-propos.html' : '/en/a-propos.html',
+        '/contact': isFr ? '/fr/contact.html' : '/en/contact.html',
+        '/portfolio': isFr ? '/fr/portfolio.html' : '/en/portfolio.html',
+        '/produits': isFr ? '/fr/produits.html' : '/en/produits.html',
+        '/solutions': isFr ? '/fr/solutions.html' : '/en/solutions.html'
+      };
+      // Try decoded path too (for accented characters)
+      var decoded = path;
+      try { decoded = decodeURIComponent(path); } catch(e) {}
+      var target = redirects[path] || redirects[decoded];
+      if (target) { window.location.replace(target); }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">

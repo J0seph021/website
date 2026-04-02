@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_/
+Disallow: /naLogImpressions
 Sitemap: https://www.galogix.ca/sitemap.xml
