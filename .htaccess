@@ -1,0 +1,73 @@
+# =====================================================
+# G.A. Logix — Configuration Apache
+# =====================================================
+
+Options -Indexes
+RewriteEngine On
+
+# -----------------------------------------------
+# 1. Force HTTPS
+# -----------------------------------------------
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# -----------------------------------------------
+# 2. Force www
+# -----------------------------------------------
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# -----------------------------------------------
+# 3. Redirections legacy (anciennes URLs)
+# -----------------------------------------------
+
+# Racine index.html → page FR
+RewriteRule ^index\.html$ /fr/index.html [R=301,L]
+
+# /Services/ et /services/ → services FR
+RewriteRule ^[Ss]ervices/?$ /fr/services.html [R=301,L]
+RewriteRule ^[Ss]ervices/[Ii]ndex\.html$ /fr/services.html [R=301,L]
+
+# /accueil → index FR
+RewriteRule ^accueil/?$ /fr/index.html [R=301,L]
+RewriteRule ^accueil/[Ii]ndex\.html$ /fr/index.html [R=301,L]
+
+# /a-propos-de-nous et variantes
+RewriteRule ^[Àa][-_][Pp]ropos[-_][Dd]e[-_][Nn]ous/?$ /fr/a-propos.html [R=301,L]
+RewriteRule ^a-propos/?$ /fr/a-propos.html [R=301,L]
+RewriteRule ^contact/?$ /fr/contact.html [R=301,L]
+RewriteRule ^portfolio/?$ /fr/portfolio.html [R=301,L]
+RewriteRule ^produits/?$ /fr/produits.html [R=301,L]
+RewriteRule ^solutions/?$ /fr/solutions.html [R=301,L]
+
+# Membres fondateurs
+RewriteRule ^[Aa][-_][Pp]ropos[-_][Dd]e[-_][Nn]ous/[Mm]embres[-_][Ff]ondateurs/?$ /fr/membres.html [R=301,L]
+RewriteRule ^membres[-_]fondateurs/?$ /fr/membres.html [R=301,L]
+
+# -----------------------------------------------
+# 4. Page d'erreur 404 personnalisée
+# -----------------------------------------------
+ErrorDocument 404 /404.html
+
+# -----------------------------------------------
+# 5. Cache navigateur (performances)
+# -----------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# -----------------------------------------------
+# 6. Compression Gzip
+# -----------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
