@@ -14,18 +14,16 @@
   };
   var TEXTS = {
     fr: {
-      title: 'Avant de commencer…',
-      message: 'Pour mieux comprendre votre parcours sur galogix.ca et améliorer votre expérience, nous aimerions activer Google Analytics. Aucune publicité, aucune revente de données — juste de la mesure anonyme.',
-      accept: 'D’accord',
-      refuse: 'Non merci',
-      learnMore: 'En savoir plus'
+      message: 'Nous utilisons des cookies pour améliorer votre expérience de navigation et analyser l’utilisation du site. En cliquant sur « Accepter », vous consentez à notre utilisation des cookies.',
+      accept: 'Accepter',
+      refuse: 'Refuser',
+      learnMore: 'En savoir plus sur notre politique de confidentialité'
     },
     en: {
-      title: 'Before you continue…',
-      message: 'To better understand your journey on galogix.ca and improve your experience, we’d like to enable Google Analytics. No ads, no data resale — just anonymous measurement.',
-      accept: 'Sounds good',
-      refuse: 'No thanks',
-      learnMore: 'Learn more'
+      message: 'We use cookies to enhance your browsing experience and analyze site usage. By clicking "Accept", you consent to our use of cookies.',
+      accept: 'Accept',
+      refuse: 'Decline',
+      learnMore: 'Learn more about our privacy policy'
     }
   };
 
@@ -68,22 +66,33 @@
   function injectStyles() {
     if (document.getElementById('galogix-consent-styles')) return;
     var css = ''
-      + '#galogix-consent-banner{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:99999;'
-      + 'background:#0C4466;color:#fff;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.35);'
-      + 'font-family:Figtree,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:780px;margin:0 auto;'
-      + 'padding:1.25rem 1.5rem;line-height:1.5;}'
-      + '#galogix-consent-banner h2{font-size:1.1rem;margin:0 0 .35rem;font-weight:700;color:#fff;}'
-      + '#galogix-consent-banner p{margin:0 0 1rem;font-size:.95rem;color:#dbeafe;}'
-      + '#galogix-consent-banner .gcb-link{color:#fff;text-decoration:underline;}'
-      + '#galogix-consent-banner .gcb-link:hover{color:#93c5fd;}'
-      + '#galogix-consent-banner .gcb-buttons{display:flex;gap:.75rem;flex-wrap:wrap;}'
-      + '#galogix-consent-banner button{flex:1;min-width:140px;padding:.65rem 1rem;border:none;border-radius:8px;'
-      + 'font-family:inherit;font-weight:600;font-size:.95rem;cursor:pointer;transition:background .15s,transform .15s;}'
-      + '#galogix-consent-banner .gcb-accept{background:#fff;color:#0C4466;}'
-      + '#galogix-consent-banner .gcb-accept:hover{background:#dbeafe;transform:translateY(-1px);}'
-      + '#galogix-consent-banner .gcb-refuse{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45);}'
-      + '#galogix-consent-banner .gcb-refuse:hover{background:rgba(255,255,255,.08);transform:translateY(-1px);}'
-      + '@media (max-width:520px){#galogix-consent-banner{padding:1rem;}#galogix-consent-banner button{flex:1 1 100%;}}';
+      + '#galogix-consent-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;'
+      + 'background:#0C4466;color:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.2);'
+      + 'font-family:Figtree,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;'
+      + 'display:flex;align-items:center;justify-content:space-between;gap:1.5rem;'
+      + 'padding:.9rem 1.5rem;line-height:1.4;}'
+      + '#galogix-consent-banner .gcb-content{display:flex;align-items:flex-start;gap:.85rem;flex:1;min-width:0;}'
+      + '#galogix-consent-banner .gcb-icon{flex-shrink:0;width:32px;height:32px;border-radius:50%;'
+      + 'background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;'
+      + 'font-size:1.15rem;line-height:1;}'
+      + '#galogix-consent-banner .gcb-text{font-size:.875rem;color:#fff;min-width:0;}'
+      + '#galogix-consent-banner .gcb-text p{margin:0 0 .15rem;}'
+      + '#galogix-consent-banner .gcb-link{color:#93c5fd;text-decoration:underline;font-size:.8rem;'
+      + 'display:inline-block;}'
+      + '#galogix-consent-banner .gcb-link:hover{color:#fff;}'
+      + '#galogix-consent-banner .gcb-buttons{display:flex;gap:.5rem;flex-shrink:0;}'
+      + '#galogix-consent-banner button{padding:.55rem 1.1rem;border:none;border-radius:6px;'
+      + 'font-family:inherit;font-weight:600;font-size:.875rem;cursor:pointer;'
+      + 'transition:background .15s,transform .1s;white-space:nowrap;}'
+      + '#galogix-consent-banner .gcb-accept{background:#93c5fd;color:#0C4466;}'
+      + '#galogix-consent-banner .gcb-accept:hover{background:#bfdbfe;}'
+      + '#galogix-consent-banner .gcb-refuse{background:#93c5fd;color:#0C4466;}'
+      + '#galogix-consent-banner .gcb-refuse:hover{background:#bfdbfe;}'
+      + '@media (max-width:760px){'
+      +   '#galogix-consent-banner{flex-direction:column;align-items:stretch;gap:.85rem;padding:1rem;}'
+      +   '#galogix-consent-banner .gcb-buttons{justify-content:flex-end;}'
+      +   '#galogix-consent-banner button{flex:1;}'
+      + '}';
     var style = document.createElement('style');
     style.id = 'galogix-consent-styles';
     style.textContent = css;
@@ -100,10 +109,15 @@
     banner.id = 'galogix-consent-banner';
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-live', 'polite');
-    banner.setAttribute('aria-label', t.title);
+    banner.setAttribute('aria-label', t.message);
     banner.innerHTML =
-      '<h2>' + t.title + '</h2>' +
-      '<p>' + t.message + ' <a href="' + privacyUrl + '" class="gcb-link">' + t.learnMore + ' →</a></p>' +
+      '<div class="gcb-content">' +
+        '<div class="gcb-icon" aria-hidden="true">🍪</div>' +
+        '<div class="gcb-text">' +
+          '<p>' + t.message + '</p>' +
+          '<a href="' + privacyUrl + '" class="gcb-link">' + t.learnMore + '</a>' +
+        '</div>' +
+      '</div>' +
       '<div class="gcb-buttons">' +
         '<button type="button" class="gcb-refuse" id="gcb-refuse">' + t.refuse + '</button>' +
         '<button type="button" class="gcb-accept" id="gcb-accept">' + t.accept + '</button>' +
