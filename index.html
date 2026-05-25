@@ -58,7 +58,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     // Auto-detect the visitor's language and redirect to /fr/ or /en/.
-    // Priority: 1) saved choice in localStorage  2) navigator.language  3) /fr/ as default (primary market).
+    // Priority: 1) saved choice  2) ?lang= URL param  3) navigator.languages
+    // Fallback: /en/ (broader international reach if visitor speaks neither FR nor EN).
     (function() {
       var saved = localStorage.getItem('galogix-lang');
       var target;
@@ -69,15 +70,17 @@
       } else {
         var langs = (navigator.languages && navigator.languages.length)
           ? navigator.languages
-          : [navigator.language || navigator.userLanguage || 'fr'];
-        // Walk through user's language preferences in order
-        var detected = 'fr';
+          : [navigator.language || navigator.userLanguage || 'en'];
+        // Walk through user's language preferences in order; first FR or EN wins.
+        var detected = null;
         for (var i = 0; i < langs.length; i++) {
           var l = (langs[i] || '').toLowerCase();
           if (l.indexOf('fr') === 0) { detected = 'fr'; break; }
           if (l.indexOf('en') === 0) { detected = 'en'; break; }
         }
-        target = detected === 'en' ? '/en/' : '/fr/';
+        // Default to English for any other language (broader international audience).
+        if (!detected) detected = 'en';
+        target = '/' + detected + '/';
         try { localStorage.setItem('galogix-lang', detected); } catch (e) {}
       }
       // Allow forcing a language via ?lang=fr or ?lang=en (useful for testing / sharing links)
@@ -91,7 +94,7 @@
     })();
   </script>
   <noscript>
-    <meta http-equiv="refresh" content="0;url=/fr/">
+    <meta http-equiv="refresh" content="0;url=/en/">
   </noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
