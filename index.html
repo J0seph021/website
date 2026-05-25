@@ -6,41 +6,149 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FW2DLMHSMN');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G.A. Logix Logiciels</title>
+  <title>G.A. Logix Logiciels — Forestry Software | Logiciels forestiers</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="robots" content="index, follow">
-  <meta name="description" content="G.A. Logix — Forestry data collection and management software. Logiciels de collecte et gestion de données forestières.">
-  <meta property="og:title" content="G.A. Logix Logiciels - Forestry Software">
-  <meta property="og:description" content="G.A. Logix — Forestry data collection and management software. Solutions complètes pour l'industrie forestière.">
+  <meta name="description" content="G.A. Logix — Forestry data collection and management software | Logiciels québécois de collecte et de gestion de données forestières. ForestLogix, MobileLogix, SyncLogix, TrackLogix, SIGLogix.">
+  <meta property="og:title" content="G.A. Logix Logiciels — Forestry Software">
+  <meta property="og:description" content="G.A. Logix — Forestry data collection and management software. Logiciels de collecte et gestion de données forestières.">
   <meta property="og:image" content="https://www.galogix.ca/images/logo-ga.png">
   <meta property="og:url" content="https://www.galogix.ca/">
   <link rel="canonical" href="https://www.galogix.ca/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_CA">
+  <meta property="og:locale:alternate" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/index.html">
-  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/index.html">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.galogix.ca/fr/">
+  <link rel="alternate" hreflang="en-CA" href="https://www.galogix.ca/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.galogix.ca/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "G.A. Logix Logiciels inc.",
+    "alternateName": "G.A. Logix",
+    "url": "https://www.galogix.ca/",
+    "logo": "https://www.galogix.ca/images/logo-ga.png",
+    "description": "Quebec-based publisher of forestry data collection and management software | Éditeur québécois de logiciels forestiers.",
+    "telephone": "+1-819-998-3881",
+    "email": "info@galogix.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "100 Route 165 Sud",
+      "addressLocality": "Plessisville",
+      "addressRegion": "QC",
+      "postalCode": "G6L 2Y2",
+      "addressCountry": "CA"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
+    // Redirect returning visitors who already picked a language.
+    // First-time visitors see the bilingual landing page (better SEO + UX clarity).
     (function() {
       var saved = localStorage.getItem('galogix-lang');
-      if (saved === 'en') { window.location.replace('en/index.html'); return; }
-      if (saved === 'fr') { window.location.replace('fr/index.html'); return; }
-      var lang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
-      if (lang.startsWith('fr')) {
-        window.location.replace('fr/index.html');
-      } else {
-        window.location.replace('en/index.html');
-      }
+      if (saved === 'en') { window.location.replace('/en/'); return; }
+      if (saved === 'fr') { window.location.replace('/fr/'); return; }
     })();
   </script>
-  <noscript>
-    <meta http-equiv="refresh" content="0;url=fr/index.html">
-  </noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Figtree', sans-serif;
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .container { max-width: 720px; }
+    .logo { height: 60px; margin-bottom: 1.5rem; }
+    h1 {
+      font-family: 'DM Serif Text', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .tagline {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    @media (max-width: 540px) { .lang-grid { grid-template-columns: 1fr; } }
+    .lang-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.2s, background 0.2s;
+      display: block;
+    }
+    .lang-card:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-3px);
+    }
+    .lang-card strong {
+      font-family: 'DM Serif Text', serif;
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .lang-card span {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-  <p><a href="fr/index.html">Français</a> | <a href="en/index.html">English</a></p>
+  <div class="container">
+    <img src="images/logo-ga.png" alt="G.A. Logix" class="logo">
+    <h1>G.A. Logix Logiciels</h1>
+    <p class="tagline">
+      Logiciels québécois de collecte et de gestion de données forestières.<br>
+      Quebec-based forestry data collection and management software.
+    </p>
+    <div class="lang-grid">
+      <a href="/fr/" class="lang-card" onclick="localStorage.setItem('galogix-lang','fr')">
+        <strong>Français</strong>
+        <span>Continuer en français</span>
+      </a>
+      <a href="/en/" class="lang-card" onclick="localStorage.setItem('galogix-lang','en')">
+        <strong>English</strong>
+        <span>Continue in English</span>
+      </a>
+    </div>
+    <footer>
+      G.A. Logix Logiciels inc. — Plessisville, Québec, Canada
+    </footer>
+  </div>
 </body>
 </html>
