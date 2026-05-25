@@ -14,17 +14,17 @@
   };
   var TEXTS = {
     fr: {
-      title: 'Vos préférences de cookies',
-      message: 'Nous utilisons Google Analytics pour mesurer l’audience et améliorer ce site. Vos données peuvent être transférées aux États-Unis. Aucun cookie publicitaire.',
-      accept: 'Accepter',
-      refuse: 'Refuser',
+      title: 'Avant de commencer…',
+      message: 'Pour mieux comprendre votre parcours sur galogix.ca et améliorer votre expérience, nous aimerions activer Google Analytics. Aucune publicité, aucune revente de données — juste de la mesure anonyme.',
+      accept: 'D’accord',
+      refuse: 'Non merci',
       learnMore: 'En savoir plus'
     },
     en: {
-      title: 'Your cookie preferences',
-      message: 'We use Google Analytics to measure audience and improve this site. Your data may be transferred to the United States. No advertising cookies.',
-      accept: 'Accept',
-      refuse: 'Refuse',
+      title: 'Before you continue…',
+      message: 'To better understand your journey on galogix.ca and improve your experience, we’d like to enable Google Analytics. No ads, no data resale — just anonymous measurement.',
+      accept: 'Sounds good',
+      refuse: 'No thanks',
       learnMore: 'Learn more'
     }
   };
