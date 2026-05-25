@@ -57,14 +57,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
-    // Redirect returning visitors who already picked a language.
-    // First-time visitors see the bilingual landing page (better SEO + UX clarity).
+    // Auto-detect the visitor's language and redirect to /fr/ or /en/.
+    // Priority: 1) saved choice in localStorage  2) navigator.language  3) /fr/ as default (primary market).
     (function() {
       var saved = localStorage.getItem('galogix-lang');
-      if (saved === 'en') { window.location.replace('/en/'); return; }
-      if (saved === 'fr') { window.location.replace('/fr/'); return; }
+      var target;
+      if (saved === 'en') {
+        target = '/en/';
+      } else if (saved === 'fr') {
+        target = '/fr/';
+      } else {
+        var langs = (navigator.languages && navigator.languages.length)
+          ? navigator.languages
+          : [navigator.language || navigator.userLanguage || 'fr'];
+        // Walk through user's language preferences in order
+        var detected = 'fr';
+        for (var i = 0; i < langs.length; i++) {
+          var l = (langs[i] || '').toLowerCase();
+          if (l.indexOf('fr') === 0) { detected = 'fr'; break; }
+          if (l.indexOf('en') === 0) { detected = 'en'; break; }
+        }
+        target = detected === 'en' ? '/en/' : '/fr/';
+        try { localStorage.setItem('galogix-lang', detected); } catch (e) {}
+      }
+      // Allow forcing a language via ?lang=fr or ?lang=en (useful for testing / sharing links)
+      var params = new URLSearchParams(window.location.search);
+      var forced = params.get('lang');
+      if (forced === 'fr' || forced === 'en') {
+        target = '/' + forced + '/';
+        try { localStorage.setItem('galogix-lang', forced); } catch (e) {}
+      }
+      window.location.replace(target);
     })();
   </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/fr/">
+  </noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
