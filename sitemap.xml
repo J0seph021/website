@@ -230,6 +230,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/blog-transformation-numerique.html</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -486,6 +494,14 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-tracklogix-reboisement.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-transformation-numerique.html</loc>
