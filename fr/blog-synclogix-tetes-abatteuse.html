@@ -9,23 +9,24 @@
   <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
-  <meta name="description" content="Comment G.A. Logix lit directement les données des têtes d'abatteuse Komatsu, Ponsse, LogMax et John Deere et les rend exploitables dans QGIS et ArcGIS, par chantier, machine et opérateur.">
+  <meta name="description" content="Comment G.A. Logix lit directement les données des têtes d'abatteuse Komatsu, Ponsse, LogMax et Logset avec SyncLogix et les rend exploitables dans ForestLogix, par chantier, machine et opérateur.">
   <meta property="og:title" content="Données de têtes d'abatteuse : de la machine à votre bureau | G.A. Logix">
-  <meta property="og:description" content="SyncLogix capte les données de production des têtes d'abatteuse, SIGLogix les rend exploitables dans QGIS et ArcGIS — par chantier, machine et opérateur.">
-  <meta property="og:image" content="https://www.galogix.ca/images/logo-ga.png">
-  <meta property="og:url" content="https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html">
-  <link rel="canonical" href="https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html">
+  <meta property="og:description" content="SyncLogix capte les données de production des têtes d'abatteuse, ForestLogix les rend exploitables au bureau — par chantier, machine et opérateur.">
+  <meta property="og:image" content="https://www.galogix.ca/fr/images/blog-tetes-abatteuse.png">
+  <meta property="og:url" content="https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html">
+  <link rel="canonical" href="https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_CA">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html">
-  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html">
+  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Données de têtes d'abatteuse : de la machine à votre bureau, sans clé USB",
     "datePublished": "2026-06-10",
+    "image": "https://www.galogix.ca/fr/images/blog-tetes-abatteuse.png",
     "author": {
       "@type": "Organization",
       "name": "G.A. Logix Logiciels inc.",
@@ -40,7 +41,7 @@
         "url": "https://www.galogix.ca/images/logo-ga.png"
       }
     },
-    "mainEntityOfPage": "https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html"
+    "mainEntityOfPage": "https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html"
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +92,7 @@
           <a href="contact.html" class="nav__link">Nous joindre</a>
         </li>
         <li class="nav__item nav__item--lang">
-          <a href="../en/blog-siglogix-tetes-abatteuse.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','en')">EN</a>
+          <a href="../en/blog-synclogix-tetes-abatteuse.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','en')">EN</a>
         </li>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -124,11 +125,11 @@
           <span>10 juin 2026</span>
         </div>
 
-        <img src="images/forestlogix-cabine.jpg" alt="Cabine de machinerie forestière - données de tête d'abatteuse" class="article__img" onerror="this.src='images/expertise-terrain.png'">
+        <img src="images/blog-tetes-abatteuse.png" alt="Abatteuse multifonctionnelle en forêt - données de tête d'abatteuse" class="article__img" onerror="this.src='images/expertise-terrain.png'">
 
-        <p>Pendant qu'une abatteuse multifonctionnelle travaille en forêt, sa tête mesure chaque tige qu'elle récolte : essence, longueur, diamètre, volume, position. En une journée, une seule machine génère des <strong>milliers de mesures</strong>. La question n'est donc pas de savoir si la donnée existe. La vraie question, c'est combien de cette donnée se rend réellement jusqu'à votre bureau — et dans quel état.</p>
+        <p>Pendant qu'une abatteuse multifonctionnelle travaille en forêt, sa tête mesure chaque tige qu'elle récolte : essence, longueur, diamètre, volume, position. En une journée, une seule machine génère des <strong>milliers de mesures</strong>. La question n'est donc pas de savoir si la donnée existe. La vraie question, c'est combien de cette donnée se rend réellement jusqu'au bureau — et dans quel état.</p>
 
-        <p>Dans beaucoup d'entreprises forestières, la réponse est décevante. Les chiffres restent prisonniers de la machine, exportés à la main quand quelqu'un y pense, transférés sur une clé USB qui finit oubliée dans la cabine, ou envoyés par courriel le vendredi soir. Résultat : le dirigeant pilote ses volumes avec une semaine de retard, et l'ingénieure forestière passe un temps fou à reconstruire un portrait de production à partir de morceaux.</p>
+        <p>Dans beaucoup d'entreprises forestières, la réponse est décevante. Les chiffres restent prisonniers de la machine, exportés à la main quand quelqu'un y pense, transférés sur une clé USB qui finit oubliée dans la cabine, ou envoyés par courriel le vendredi soir. Résultat : les volumes sont pilotés avec une semaine de retard, et un temps précieux est perdu à reconstruire un portrait de production à partir de morceaux.</p>
 
         <p>Chez G.A. Logix, on s'attaque à ce problème depuis longtemps. Voici comment, concrètement.</p>
 
@@ -144,32 +145,30 @@
           <li><strong>Komatsu</strong></li>
           <li><strong>Ponsse</strong></li>
           <li><strong>LogMax</strong></li>
-          <li><strong>John Deere</strong></li>
+          <li><strong>Logset</strong></li>
         </ul>
         <p>Peu importe laquelle de ces marques équipe votre flotte, la logique reste la même du point de vue de l'utilisateur : vous sélectionnez votre chantier, et les données de production arrivent au bureau, prêtes à être analysées.</p>
 
-        <h2>SyncLogix et SIGLogix : deux faces du même flux</h2>
+        <h2>SyncLogix et ForestLogix : deux faces du même flux</h2>
         <p>Deux produits G.A. Logix travaillent ensemble pour rendre tout ça possible :</p>
         <ul>
-          <li><strong><a href="synclogix.html">SyncLogix</a></strong> est le pipeline serveur qui capte et ingère les données depuis les machines vers le cloud G.A. Logix. Il tourne en arrière-plan, sans intervention de l'utilisateur.</li>
-          <li><strong><a href="siglogix.html">SIGLogix</a></strong> est le module de bureau qui récupère et analyse ces données, directement sur le poste de travail de l'ingénieure.</li>
+          <li><strong><a href="synclogix.html">SyncLogix</a></strong> est le pipeline qui capte les données de production directement dans les machines et les synchronise vers le cloud G.A. Logix. Il tourne en arrière-plan, sans intervention de l'utilisateur.</li>
+          <li><strong><a href="forestlogix.html">ForestLogix</a></strong> est la plateforme de gestion des opérations forestières où ces données deviennent disponibles au bureau : cartographie, tables, segmentation et exports.</li>
         </ul>
-        <p>En résumé : SyncLogix alimente le cloud avec les données de production des têtes d'abatteuse, et SIGLogix permet de les consommer et de les analyser au bureau. <strong>L'un capte, l'autre exploite.</strong></p>
-        <p>SIGLogix existe d'ailleurs en trois versions parallèles, pour s'adapter à l'outil que votre équipe utilise déjà : un plugin pour <strong>QGIS</strong>, un module pour <strong>ArcMap</strong> et un module pour <strong>ArcGIS Pro</strong>. Personne n'est laissé derrière.</p>
+        <p>En résumé : SyncLogix alimente le cloud avec les données de production des têtes d'abatteuse, et ForestLogix permet de les consulter et de les analyser au bureau. <strong>L'un capte, l'autre exploite.</strong></p>
 
         <h2>Concrètement, à quoi ça ressemble au bureau</h2>
-        <p>Du point de vue de l'ingénieure forestière, le déroulement est direct :</p>
+        <p>Le déroulement est direct :</p>
         <ul>
-          <li>Elle ouvre QGIS (ou ArcGIS) et lance le module de récupération de SIGLogix.</li>
-          <li>Elle choisit un ou plusieurs chantiers dans la liste fournie par le serveur G.A. Logix.</li>
-          <li>SIGLogix télécharge les données de production de tête d'abatteuse pour ces chantiers.</li>
-          <li>Le téléchargement et les traitements lourds tournent en arrière-plan : elle peut continuer à travailler pendant ce temps, en suivant la progression dans un journal.</li>
+          <li>Dans ForestLogix, on sélectionne un ou plusieurs chantiers dans la liste fournie par le serveur G.A. Logix.</li>
+          <li>Les données de production de tête d'abatteuse sont téléchargées pour ces chantiers.</li>
+          <li>Le téléchargement et les traitements lourds tournent en arrière-plan : on peut continuer à travailler pendant ce temps.</li>
           <li>À la fin, les données apparaissent comme des couches géospatiales et des tables, prêtes à être cartographiées, segmentées et exportées.</li>
         </ul>
-        <p>La segmentation se fait notamment <strong>par machine et par opérateur</strong>. C'est précisément ce niveau de détail qui transforme une masse de mesures en information de gestion utile. Et comme la sélection de chantiers se fait en lot, une coordonnatrice qui prépare la revue de production de la semaine peut monter le portrait de plusieurs parterres de coupe en une seule opération, plutôt que de répéter la même manipulation dix fois.</p>
+        <p>La segmentation se fait notamment <strong>par machine et par opérateur</strong>. C'est précisément ce niveau de détail qui transforme une masse de mesures en information de gestion utile. Et comme la sélection de chantiers se fait en lot, la préparation d'une revue de production hebdomadaire couvrant plusieurs parterres de coupe se monte en une seule opération, plutôt qu'en répétant la même manipulation dix fois.</p>
 
         <h2>Des données qui restent à portée de main</h2>
-        <p>Quand SIGLogix télécharge les données d'un chantier, il ne se contente pas de les afficher une seule fois. Elles sont aussi <strong>stockées localement</strong> sur le poste, dans une base légère, ce qui permet de les requêter et de les réutiliser sans relancer un téléchargement à chaque ouverture. Concrètement, l'ingénieure peut rouvrir son chantier le lendemain, retravailler ses analyses et produire ses exports, même si la connexion du bureau est capricieuse ce matin-là.</p>
+        <p>Les données téléchargées ne sont pas affichées une seule fois puis perdues : elles restent <strong>disponibles localement</strong> sur le poste, ce qui permet de les requêter et de les réutiliser sans relancer un téléchargement à chaque ouverture. Concrètement, on peut rouvrir un chantier le lendemain, retravailler ses analyses et produire ses exports, même si la connexion du bureau est capricieuse ce matin-là.</p>
         <p>C'est un détail qui compte dans la vraie vie : les réseaux des bureaux régionaux ne sont pas toujours parfaits, et personne n'a envie d'attendre un nouveau téléchargement complet juste pour ajuster une symbologie.</p>
 
         <h2>Ce que ça change pour un dirigeant forestier</h2>
@@ -177,8 +176,8 @@
         <p>Ça veut dire des volumes et des essences disponibles pour le suivi, sans la course aux fichiers du vendredi. Ça veut dire moins d'écarts entre ce que vous facturez et ce que vous avez réellement sorti. Et ça veut dire que vous pouvez répondre à votre conseil d'administration ou à votre client avec des chiffres, pas avec des estimations.</p>
         <p>Le tout est livré par une équipe de Plessisville qui comprend le contexte québécois : forêt publique, MRNF, RNI, et le quotidien de la récolte mécanisée.</p>
 
-        <h2>Ce que ça change pour une ingénieure forestière</h2>
-        <p>Au bureau, l'avantage est encore plus terre à terre. Plus besoin d'aller en forêt brancher une clé USB sur chaque machine. Plus besoin d'attendre qu'un opérateur pense à exporter. Les données arrivent dans le cloud G.A. Logix et se récupèrent directement dans l'outil cartographique déjà utilisé au bureau.</p>
+        <h2>Ce que ça change au bureau</h2>
+        <p>Pour l'équipe technique, l'avantage est encore plus terre à terre. Plus besoin d'aller en forêt brancher une clé USB sur chaque machine. Plus besoin d'attendre qu'un opérateur pense à exporter. Les données arrivent dans le cloud G.A. Logix et se consultent directement dans ForestLogix.</p>
         <p>Une fois les couches chargées, l'analyse est libre :</p>
         <ul>
           <li>Suivre les volumes récoltés par essence, pour appuyer la facturation et le mesurage.</li>
@@ -191,19 +190,18 @@
         <h2>Soyons clairs sur ce que ça ne fait pas</h2>
         <p>L'honnêteté technique fait partie de notre marque, alors disons les choses telles qu'elles sont :</p>
         <ul>
-          <li>SIGLogix <strong>ne pilote pas la tête d'abatteuse en temps réel</strong>. Il consomme les données après coup, au bureau. Il ne configure pas la machine et ne reçoit pas de flux pendant l'abattage.</li>
-          <li>Ce n'est <strong>pas une application web ni mobile</strong>. La récupération se fait sur un poste Windows, dans QGIS ou ArcGIS.</li>
-          <li>Il n'y a <strong>pas de notification automatique</strong> de nouvelles données. SIGLogix interroge le serveur quand l'utilisateur le demande.</li>
-          <li>Les marques couvertes sont <strong>Komatsu, Ponsse, LogMax et John Deere</strong>. Les autres marques ne sont pas prises en charge aujourd'hui.</li>
+          <li>La solution <strong>ne pilote pas la tête d'abatteuse en temps réel</strong>. Elle consomme les données après coup, au bureau. Elle ne configure pas la machine et ne reçoit pas de flux pendant l'abattage.</li>
+          <li>Il n'y a <strong>pas de notification automatique</strong> de nouvelles données. La récupération se lance quand l'utilisateur le demande.</li>
+          <li>Les marques couvertes sont <strong>Komatsu, Ponsse, LogMax et Logset</strong>. Les autres marques ne sont pas prises en charge aujourd'hui.</li>
         </ul>
         <p>Ces limites ne sont pas des excuses, ce sont des balises. Vous savez exactement ce que vous achetez.</p>
 
         <h2>Pourquoi c'est important au Québec</h2>
         <p>La récolte mécanisée est la réalité de la majorité des chantiers en forêt publique. Les volumes sont importants, les marges sont serrées, et la traçabilité de la production est un enjeu de gestion autant que de conformité.</p>
-        <p>Avoir un fournisseur local qui lit les données de plusieurs marques de têtes d'abatteuse, qui les rend disponibles dans l'outil cartographique que vous utilisez déjà, et qui répond en français, ça simplifie une chaîne qui est trop souvent un casse-tête. C'est exactement le genre de problème concret qu'on aime régler chez G.A. Logix. <strong>Le terrain est notre cahier des charges.</strong></p>
+        <p>Avoir un fournisseur local qui lit les données de plusieurs marques de têtes d'abatteuse, qui les rend disponibles dans une plateforme déjà utilisée au bureau, et qui répond en français, ça simplifie une chaîne qui est trop souvent un casse-tête. C'est exactement le genre de problème concret qu'on aime régler chez G.A. Logix. <strong>Le terrain est notre cahier des charges.</strong></p>
 
         <h2>En résumé</h2>
-        <p>Vos têtes d'abatteuse génèrent déjà une montagne de données précieuses. Le défi n'a jamais été de les produire, mais de les sortir de la machine et de les rendre utiles. Avec SyncLogix qui capte et SIGLogix qui exploite, ces données arrivent au bureau, par machine et par opérateur, prêtes à analyser, peu importe la marque.</p>
+        <p>Vos têtes d'abatteuse génèrent déjà une montagne de données précieuses. Le défi n'a jamais été de les produire, mais de les sortir de la machine et de les rendre utiles. Avec SyncLogix qui capte et ForestLogix qui exploite, ces données arrivent au bureau, par machine et par opérateur, prêtes à analyser, peu importe la marque.</p>
         <p>Vous voulez voir ce que ça donne avec vos propres chantiers? <a href="contact.html">Demandez votre démonstration gratuite</a> — on vous montre le flux complet, du parterre de coupe à votre écran.</p>
 
         <!-- ARTICLES RÉCENTS -->

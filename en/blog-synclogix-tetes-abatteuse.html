@@ -9,23 +9,24 @@
   <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
-  <meta name="description" content="How G.A. Logix reads production data directly from Komatsu, Ponsse, LogMax and John Deere harvester heads and makes it usable in QGIS and ArcGIS — by block, machine and operator.">
+  <meta name="description" content="How G.A. Logix reads production data directly from Komatsu, Ponsse, LogMax and Logset harvester heads with SyncLogix and makes it usable in ForestLogix — by block, machine and operator.">
   <meta property="og:title" content="Harvester Head Data: From the Machine to Your Office | G.A. Logix">
-  <meta property="og:description" content="SyncLogix captures harvester head production data, SIGLogix makes it usable in QGIS and ArcGIS — by block, machine and operator.">
-  <meta property="og:image" content="https://www.galogix.ca/images/logo-ga.png">
-  <meta property="og:url" content="https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html">
-  <link rel="canonical" href="https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html">
+  <meta property="og:description" content="SyncLogix captures harvester head production data, ForestLogix makes it usable at the office — by block, machine and operator.">
+  <meta property="og:image" content="https://www.galogix.ca/en/images/blog-tetes-abatteuse.png">
+  <meta property="og:url" content="https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html">
+  <link rel="canonical" href="https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-tetes-abatteuse.html">
-  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html">
+  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Harvester Head Data: From the Machine to Your Office, No USB Key Required",
     "datePublished": "2026-06-10",
+    "image": "https://www.galogix.ca/en/images/blog-tetes-abatteuse.png",
     "author": {
       "@type": "Organization",
       "name": "G.A. Logix Logiciels inc.",
@@ -40,7 +41,7 @@
         "url": "https://www.galogix.ca/images/logo-ga.png"
       }
     },
-    "mainEntityOfPage": "https://www.galogix.ca/en/blog-siglogix-tetes-abatteuse.html"
+    "mainEntityOfPage": "https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html"
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,7 +92,7 @@
           <a href="contact.html" class="nav__link">Contact Us</a>
         </li>
         <li class="nav__item nav__item--lang">
-          <a href="../fr/blog-siglogix-tetes-abatteuse.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','fr')">FR</a>
+          <a href="../fr/blog-synclogix-tetes-abatteuse.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','fr')">FR</a>
         </li>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -124,11 +125,11 @@
           <span>June 10, 2026</span>
         </div>
 
-        <img src="images/forestlogix-cabine.jpg" alt="Forestry machinery cab - harvester head data" class="article__img" onerror="this.src='images/expertise-terrain.png'">
+        <img src="images/blog-tetes-abatteuse.png" alt="Harvester working in the forest - harvester head data" class="article__img" onerror="this.src='images/expertise-terrain.png'">
 
-        <p>While a harvester works in the forest, its head measures every stem it processes: species, length, diameter, volume, position. In a single day, one machine generates <strong>thousands of measurements</strong>. So the question is not whether the data exists. The real question is how much of that data actually makes it to your office — and in what shape.</p>
+        <p>While a harvester works in the forest, its head measures every stem it processes: species, length, diameter, volume, position. In a single day, one machine generates <strong>thousands of measurements</strong>. So the question is not whether the data exists. The real question is how much of that data actually makes it to the office — and in what shape.</p>
 
-        <p>In many forestry companies, the answer is disappointing. The numbers stay locked inside the machine, exported by hand when someone remembers, transferred to a USB key that ends up forgotten in the cab, or emailed as an attachment on Friday evening. The result: managers steer their volumes a week behind, and forest engineers spend far too much time rebuilding a production picture from scattered pieces.</p>
+        <p>In many forestry companies, the answer is disappointing. The numbers stay locked inside the machine, exported by hand when someone remembers, transferred to a USB key that ends up forgotten in the cab, or emailed as an attachment on Friday evening. The result: volumes are managed a week behind, and valuable time is lost rebuilding a production picture from scattered pieces.</p>
 
         <p>At G.A. Logix, we have been tackling this problem for a long time. Here is how, concretely.</p>
 
@@ -144,32 +145,30 @@
           <li><strong>Komatsu</strong></li>
           <li><strong>Ponsse</strong></li>
           <li><strong>LogMax</strong></li>
-          <li><strong>John Deere</strong></li>
+          <li><strong>Logset</strong></li>
         </ul>
         <p>Whichever of these brands equips your fleet, the logic stays the same from the user's point of view: you select your harvest block, and the production data arrives at the office, ready to be analyzed.</p>
 
-        <h2>SyncLogix and SIGLogix: two sides of the same flow</h2>
+        <h2>SyncLogix and ForestLogix: two sides of the same flow</h2>
         <p>Two G.A. Logix products work together to make all of this possible:</p>
         <ul>
-          <li><strong><a href="synclogix.html">SyncLogix</a></strong> is the server pipeline that captures and ingests the data from the machines into the G.A. Logix cloud. It runs in the background, with no user intervention.</li>
-          <li><strong><a href="siglogix.html">SIGLogix</a></strong> is the desktop module that retrieves and analyzes that data, directly on the engineer's workstation.</li>
+          <li><strong><a href="synclogix.html">SyncLogix</a></strong> is the pipeline that captures production data directly from the machines and synchronizes it to the G.A. Logix cloud. It runs in the background, with no user intervention.</li>
+          <li><strong><a href="forestlogix.html">ForestLogix</a></strong> is the forestry operations management platform where that data becomes available at the office: mapping, tables, segmentation and exports.</li>
         </ul>
-        <p>In short: SyncLogix feeds the cloud with harvester head production data, and SIGLogix lets you consume and analyze it at the office. <strong>One captures, the other exploits.</strong></p>
-        <p>SIGLogix also comes in three parallel versions, to fit the tool your team already uses: a plugin for <strong>QGIS</strong>, a module for <strong>ArcMap</strong> and a module for <strong>ArcGIS Pro</strong>. Nobody gets left behind.</p>
+        <p>In short: SyncLogix feeds the cloud with harvester head production data, and ForestLogix lets you consult and analyze it at the office. <strong>One captures, the other exploits.</strong></p>
 
         <h2>Concretely, what it looks like at the office</h2>
-        <p>From the forest engineer's point of view, the workflow is straightforward:</p>
+        <p>The workflow is straightforward:</p>
         <ul>
-          <li>She opens QGIS (or ArcGIS) and launches the SIGLogix retrieval module.</li>
-          <li>She selects one or more harvest blocks from the list provided by the G.A. Logix server.</li>
-          <li>SIGLogix downloads the harvester head production data for those blocks.</li>
-          <li>The download and heavy processing run in the background: she can keep working in the meantime, following progress in a log.</li>
+          <li>In ForestLogix, select one or more harvest blocks from the list provided by the G.A. Logix server.</li>
+          <li>The harvester head production data is downloaded for those blocks.</li>
+          <li>The download and heavy processing run in the background: work can continue in the meantime.</li>
           <li>At the end, the data appears as geospatial layers and tables, ready to be mapped, segmented and exported.</li>
         </ul>
-        <p>Segmentation is done notably <strong>by machine and by operator</strong>. That is precisely the level of detail that turns a mass of measurements into useful management information. And since block selection works in batch, a coordinator preparing the weekly production review can build the picture for several cut blocks in a single operation, instead of repeating the same steps ten times.</p>
+        <p>Segmentation is done notably <strong>by machine and by operator</strong>. That is precisely the level of detail that turns a mass of measurements into useful management information. And since block selection works in batch, a weekly production review covering several cut blocks comes together in a single operation, instead of repeating the same steps ten times.</p>
 
         <h2>Data that stays within reach</h2>
-        <p>When SIGLogix downloads a block's data, it does not just display it once. The data is also <strong>stored locally</strong> on the workstation, in a lightweight database, so it can be queried and reused without triggering a new download every time. Concretely, the engineer can reopen her block the next day, rework her analyses and produce her exports, even if the office connection is acting up that morning.</p>
+        <p>Downloaded data is not displayed once and then lost: it remains <strong>available locally</strong> on the workstation, so it can be queried and reused without triggering a new download every time. Concretely, a block can be reopened the next day, analyses reworked and exports produced, even if the office connection is acting up that morning.</p>
         <p>It is a detail that matters in real life: regional office networks are not always perfect, and nobody wants to wait for a full re-download just to adjust a symbology.</p>
 
         <h2>What it changes for a forestry manager</h2>
@@ -177,8 +176,8 @@
         <p>That means volumes and species available for monitoring, without the Friday file chase. That means fewer gaps between what you invoice and what you actually produced. And it means you can answer your board or your client with numbers, not estimates.</p>
         <p>All of it delivered by a team based in Plessisville that understands the Quebec context: public forest, MRNF, RNI, and the daily reality of mechanized harvesting.</p>
 
-        <h2>What it changes for a forest engineer</h2>
-        <p>At the office, the advantage is even more down to earth. No more driving into the forest to plug a USB key into each machine. No more waiting for an operator to remember to export. The data arrives in the G.A. Logix cloud and is retrieved directly in the mapping tool already used at the office.</p>
+        <h2>What it changes at the office</h2>
+        <p>For the technical team, the advantage is even more down to earth. No more driving into the forest to plug a USB key into each machine. No more waiting for an operator to remember to export. The data arrives in the G.A. Logix cloud and is consulted directly in ForestLogix.</p>
         <p>Once the layers are loaded, the analysis is wide open:</p>
         <ul>
           <li>Track harvested volumes by species, to support invoicing and scaling.</li>
@@ -191,19 +190,18 @@
         <h2>Let us be clear about what it does not do</h2>
         <p>Technical honesty is part of our brand, so let us say things as they are:</p>
         <ul>
-          <li>SIGLogix <strong>does not control the harvester head in real time</strong>. It consumes the data after the fact, at the office. It does not configure the machine and does not receive a live feed during felling.</li>
-          <li>It is <strong>not a web or mobile application</strong>. Retrieval happens on a Windows desktop, in QGIS or ArcGIS.</li>
-          <li>There is <strong>no automatic notification</strong> of new data. SIGLogix queries the server when the user asks.</li>
-          <li>The supported brands are <strong>Komatsu, Ponsse, LogMax and John Deere</strong>. Other brands are not supported today.</li>
+          <li>The solution <strong>does not control the harvester head in real time</strong>. It consumes the data after the fact, at the office. It does not configure the machine and does not receive a live feed during felling.</li>
+          <li>There is <strong>no automatic notification</strong> of new data. Retrieval is launched when the user asks.</li>
+          <li>The supported brands are <strong>Komatsu, Ponsse, LogMax and Logset</strong>. Other brands are not supported today.</li>
         </ul>
         <p>These limits are not excuses, they are guideposts. You know exactly what you are buying.</p>
 
         <h2>Why it matters in Quebec</h2>
         <p>Mechanized harvesting is the reality of most public forest operations. Volumes are large, margins are tight, and production traceability is as much a management issue as a compliance one.</p>
-        <p>Having a local provider that reads data from several harvester head brands, makes it available in the mapping tool you already use, and answers in French, simplifies a chain that is too often a headache. That is exactly the kind of concrete problem we love solving at G.A. Logix. <strong>The field is our specification sheet.</strong></p>
+        <p>Having a local provider that reads data from several harvester head brands, makes it available in a platform already used at the office, and answers in French, simplifies a chain that is too often a headache. That is exactly the kind of concrete problem we love solving at G.A. Logix. <strong>The field is our specification sheet.</strong></p>
 
         <h2>In summary</h2>
-        <p>Your harvester heads already generate a mountain of valuable data. The challenge was never producing it, but getting it out of the machine and making it useful. With SyncLogix capturing and SIGLogix exploiting, that data arrives at the office, by machine and by operator, ready to analyze, whatever the brand.</p>
+        <p>Your harvester heads already generate a mountain of valuable data. The challenge was never producing it, but getting it out of the machine and making it useful. With SyncLogix capturing and ForestLogix exploiting, that data arrives at the office, by machine and by operator, ready to analyze, whatever the brand.</p>
         <p>Want to see what it looks like with your own harvest blocks? <a href="contact.html">Request your free demo</a> — we will show you the complete flow, from the cut block to your screen.</p>
 
         <!-- RECENT ARTICLES -->
