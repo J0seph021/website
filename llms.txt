@@ -17,6 +17,36 @@
 - Custom software development for forestry operations
 - GIS integration consulting
 
+## Product Pages
+
+- [ForestLogix](https://www.galogix.ca/en/forestlogix.html): Forestry operations management platform (desktop, tablet, mobile).
+- [MobileLogix](https://www.galogix.ca/en/mobilelogix.html): Mobile field application with AI-powered forestry chatbot.
+- [SyncLogix](https://www.galogix.ca/en/synclogix.html): Real-time data synchronization engine.
+- [TrackLogix](https://www.galogix.ca/en/tracklogix.html): Reforestation tracking with connected smartwatches.
+- [SIGLogix](https://www.galogix.ca/en/siglogix.html): GIS integration for ArcMap/ArcGIS Pro.
+- [Products overview](https://www.galogix.ca/en/produits.html): All products at a glance.
+
+## Key Pages
+
+- [Services](https://www.galogix.ca/en/services.html): Forestry software services and offerings.
+- [Solutions](https://www.galogix.ca/en/solutions.html): Complete forestry solutions.
+- [Custom Development](https://www.galogix.ca/en/developpement.html): Custom software development for forestry operations.
+- [About Us](https://www.galogix.ca/en/a-propos.html): Company background and team.
+- [Portfolio](https://www.galogix.ca/en/portfolio.html): Projects and case studies.
+- [Contact](https://www.galogix.ca/en/contact.html): Get in touch.
+
+## Guides
+
+- [Forestry Software Guide](https://www.galogix.ca/en/guide-forestry-software.html): Choosing forestry management software.
+- [Forestry GPS Guide](https://www.galogix.ca/en/guide-forestry-gps.html): GPS practices for forestry operations.
+- [Forestry Contractor Guide](https://www.galogix.ca/en/guide-forestry-contractor.html): Resources for forestry contractors.
+- [Field Data Collection Guide](https://www.galogix.ca/en/guide-field-data-collection.html): Collecting field data efficiently.
+
+## Notes
+
+- The site is bilingual. French versions of every page are available by replacing `/en/` with `/fr/` in any URL above (e.g. https://www.galogix.ca/fr/forestlogix.html).
+- A full list of pages is available in the sitemap: https://www.galogix.ca/sitemap.xml
+
 ## Contact
 
 - Website: https://www.galogix.ca
