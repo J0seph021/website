@@ -230,6 +230,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/blog-mobilelogix-carburant.html</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
