@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="/js/consent.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SigLogix: the same GIS map on QGIS, ArcMap and ArcGIS Pro | G.A. Logix</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="description" content="Offline MRNF orthophotos, site-preparation tools and a production report: SigLogix delivers the same power on QGIS, ArcMap and ArcGIS Pro, with about 80 percent shared code.">
+  <meta property="og:title" content="SigLogix: the same GIS map on QGIS, ArcMap and ArcGIS Pro | G.A. Logix">
+  <meta property="og:description" content="One business logic, three platforms. Your MRNF orthophotos embedded offline and your production report, now identical on QGIS, ArcMap and ArcGIS Pro.">
+  <meta property="og:image" content="https://www.galogix.ca/en/images/blog-siglogix-3-plateformes.png">
+  <meta property="og:url" content="https://www.galogix.ca/en/blog-siglogix-3-plateformes.html">
+  <link rel="canonical" href="https://www.galogix.ca/en/blog-siglogix-3-plateformes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html">
+  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-3-plateformes.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SigLogix: the same GIS map on QGIS, ArcMap and ArcGIS Pro",
+    "datePublished": "2026-07-02",
+    "image": "https://www.galogix.ca/en/images/blog-siglogix-3-plateformes.png",
+    "author": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.galogix.ca/images/logo-ga.png"
+      }
+    },
+    "mainEntityOfPage": "https://www.galogix.ca/en/blog-siglogix-3-plateformes.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article__table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    .article__table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .article__table th, .article__table td { padding: 0.6rem 0.85rem; text-align: left; border-bottom: 1px solid #e2e2e2; }
+    .article__table thead th { background: #14392b; color: #fff; }
+    .article__table tbody tr:nth-child(even) { background: #f4f6f4; }
+    .article__table td:not(:first-child) { text-align: center; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-ga.png" alt="G.A. Logix">G.A. Logix Software</a>
+      <nav class="nav" id="nav">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="a-propos.html" class="nav__link">About Us &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="membres.html">Founding Members</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="solutions.html" class="nav__link">Solutions &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="forestlogix.html">ForestLogix</a>
+            <a href="mobilelogix.html">MobileLogix</a>
+            <a href="synclogix.html">SyncLogix</a>
+            <a href="tracklogix.html">TrackLogix</a>
+            <a href="siglogix.html">SIGLogix</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="produits.html" class="nav__link">Products &amp; Services &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="produits.html">Our Products</a>
+            <a href="developpement.html">Custom Development</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="actualites.html" class="nav__link nav__link--active">News</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Contact Us</a>
+        </li>
+        <li class="nav__item nav__item--lang">
+          <a href="../fr/blog-siglogix-3-plateformes.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','fr')">FR</a>
+        </li>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('images/hero-forest.jpg');"></div>
+    <div class="hero__content">
+      <h1>The same GIS map, everywhere</h1>
+      <p>SigLogix on QGIS, ArcMap and ArcGIS Pro</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="article fade-up">
+
+        <a href="actualites.html" class="article__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to News
+        </a>
+
+        <div class="article__meta">
+          <span class="article__tag">Product</span>
+          <span>July 2, 2026</span>
+        </div>
+
+        <img src="images/blog-siglogix-3-plateformes.png" alt="A forestry GIS specialist preparing her orthophotos at the office with SigLogix" class="article__img" onerror="this.src='images/expertise-terrain.png'">
+
+        <p>On a forestry team, GIS is never a single story. One engineer preps her blocks in QGIS. A more senior colleague still runs ArcMap, because his templates have lived there for ten years. Another has moved to ArcGIS Pro. Three platforms, three sets of habits, and often the feeling of having to redo everything twice when it is time to prepare a cutblock.</p>
+
+        <p>At G.A. Logix, we made the opposite choice. <a href="siglogix.html">SigLogix</a>, our forestry GIS toolkit, exists in three parallel versions, one for each platform, but with the same business logic underneath. In practice, about 80 percent of the code is shared across the three. When we add a capability on one side, we port it to the others. That is exactly what just happened on the ArcMap side, which now joins ArcGIS Pro and QGIS on the functions that matter for site preparation.</p>
+
+        <p>This article walks through what that changes for your team, whatever platform each person works on.</p>
+
+        <h2>The real problem: three platforms, three ways of working</h2>
+        <p>The forestry GIS world in Quebec is split. On one side, the Esri ecosystem, legacy ArcMap and the more modern ArcGIS Pro, very common in offices that have worked with the government for a long time. On the other, QGIS, free and open, which has gained enormous ground.</p>
+        <p>The result, we see it with our clients: a single organization often ends up running two or three platforms in parallel. Each has its strengths, but each also has its quirks. And when an in-house tool exists on only one platform, the person working on the other two is stuck. They export a file, email it, re-import it elsewhere, and redo the symbology. That is wasted time, and it is also a source of errors.</p>
+        <p>The idea behind SigLogix is to remove that friction. Whether you are on QGIS, ArcMap or ArcGIS Pro, you get the same tools, the same way of preparing a site, and the same results.</p>
+
+        <h2>One business logic, three platforms</h2>
+        <p>Parity is not a slogan. It is a matrix we maintain tool by tool. Here is where the main site-preparation functions stand.</p>
+        <div class="article__table-wrap">
+        <table class="article__table">
+          <thead>
+            <tr><th>SigLogix function</th><th>QGIS</th><th>ArcMap</th><th>ArcGIS Pro</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Offline embedded orthophotos and basemaps</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Publishing layers as WMS / WMTS services</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Conversion tools (reprojection, field cleanup)</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>TPK Esri to MBTiles conversion</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Export to handheld Garmin GPS</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>Survey plan and sampling grids</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td>QR codes for the mobile map</td><td>No</td><td>No</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>A few cells stay specific to one platform, and that is normal: the TPK format is an Esri format, it makes no sense in QGIS. But on the essentials, site preparation works the same way everywhere. That is the heart of June's update: porting to ArcMap the offline basemap functions and the production report that already existed on ArcGIS Pro.</p>
+
+        <h2>Your MRNF orthophotos, embedded and offline</h2>
+        <p>This is probably the most requested function. In Quebec, the orthophotos and layers from the Ministry of Natural Resources and Forests are a daily reference. The problem is that they live online, and the cutblock is often 60 or 80 kilometers from the last cell tower.</p>
+        <p>SigLogix lets you prepare a basemap at the office and embed it in the MBTiles format, an open standard based on a simple database. Once prepared, this basemap downloads once, while the device is on the network, then displays in the cab with no connection at all. The same MBTiles file can then serve on the <a href="forestlogix.html">ForestLogix</a> tablet or the <a href="mobilelogix.html">MobileLogix</a> app, with nothing to redo.</p>
+        <p>Here is what it looks like in real life:</p>
+        <ul>
+          <li>You prepare your orthophoto mosaic at the office, on the platform you already use.</li>
+          <li>You embed it in the open MBTiles format.</li>
+          <li>The field team downloads it once, then works with no network for the whole contract.</li>
+          <li>The same map serves at the office, on the tablet and on the phone.</li>
+        </ul>
+        <p>And for clients who spent years in the Esri stack, we added a direct bridge: converting a TPK file, ArcGIS's proprietary tile format, into standard MBTiles. In one click, your legacy basemap becomes usable on the tablet in the field, without rebuilding it from scratch.</p>
+
+        <h2>From office to field without breaking the chain</h2>
+        <p>The strength of a GIS toolkit is not each function taken in isolation. It is the complete chain, from the office to the cutblock.</p>
+        <p>SigLogix can publish your layers as an open cartographic service, in WMS or WMTS, so the whole team consumes the same up-to-date data from any client, instead of passing SHP files around by email. On ArcGIS Pro, we go even further with QR codes that bring the map straight to mobile.</p>
+        <p>And for teams that do not have a ForestLogix tablet, there is another bridge: direct export to a handheld Garmin GPS. The site mapping goes out with the operator, readable like a native map on the device. When a subcontractor shows up with their own Garmin, we are not caught off guard.</p>
+        <p>The important thing is that all of this starts from the same place. You prepare once, and the data flows down to the field through the channel that suits each team.</p>
+
+        <h2>A production report that keeps pace with the site</h2>
+        <p>The last piece ported to ArcMap is the production report. It breaks down time and area worked by day and by site, and it relies on real data rather than back-of-the-napkin estimates. This report already existed on ArcGIS Pro. It is now aligned on the ArcMap side, which means an office still running ArcMap no longer has to choose between keeping its habits and having a clean production follow-up.</p>
+        <p>For a manager or a works coordinator, it is a concrete tool when it is time to invoice, plan the next week, or answer a client who wants to know where the contract stands.</p>
+
+        <h2>The small tools that save the big hours</h2>
+        <p>Preparing a site is not just a basemap. It is a series of repetitive manipulations that eat up time when they are poorly tooled. SigLogix bundles these everyday gestures in the same environment, on all three platforms.</p>
+        <ul>
+          <li>Reproject several layers at once to the right coordinate system, with the systems used in Quebec already at hand.</li>
+          <li>Clean a layer by removing unneeded fields, with an automatic backup before the operation.</li>
+          <li>Turn a point layer into lines or polygons, for example to build a block outline from points collected in the field.</li>
+          <li>Prepare a survey plan, that is, a sampling grid for your forest inventory, right in the tool.</li>
+        </ul>
+        <p>None of these gestures is spectacular on its own. But end to end, over a season, it is hours recovered and far fewer round trips between different tools. And since all of this lives in the same box on QGIS, ArcMap and ArcGIS Pro, the person who changes role or platform does not start from zero.</p>
+
+        <h2>Why it matters for your team</h2>
+        <p>In the end, parity across three platforms is not a technical feat for show. It is a direct answer to problems forestry teams live every week.</p>
+        <ul>
+          <li><strong>For the project owner:</strong> you exchange your maps and data with your subcontractors without worrying about their platform. Whether one works in QGIS and another in ArcGIS Pro, everyone speaks the same language, and you receive consistent deliverables.</li>
+          <li><strong>For the office running ArcMap:</strong> no need to migrate everything to ArcGIS Pro to get the modern functions. They come to you.</li>
+          <li><strong>For the manager:</strong> a single tool to know and to train on, whatever each employee's profile. Less training, less dependence on a single person.</li>
+          <li><strong>For the field team:</strong> the same map, prepared once, that follows all the way into the dead zone.</li>
+        </ul>
+        <p>It is also a signal about how we work. SigLogix is not a frozen piece of software. When a function exists on one platform, we port it to the others, because we develop right here, in Plessisville, and we listen to what teams tell us. A local, responsive software maker is exactly what makes this kind of parity possible.</p>
+
+        <h2>Ready to see SigLogix on your platform?</h2>
+        <p>Whether your team works on QGIS, ArcMap or ArcGIS Pro, SigLogix gives you the same forestry toolkit, from the offline basemap to the production report. And if you are spread across several platforms, that is precisely where parity makes all the difference.</p>
+        <p><a href="contact.html">Request your free demonstration</a>. We'll show you SigLogix on the platform you already use, with your own sites in mind.</p>
+
+        <!-- RECENT ARTICLES -->
+        <div class="related-posts fade-up">
+          <h3>Recent Articles</h3>
+          <div class="columns columns--3">
+            <div class="related-post-card">
+              <h4><a href="blog-mobilelogix-carburant.html">Fuel: the expense you track the least well</a></h4>
+              <div class="blog-card__meta"><span>June 16, 2026</span> &middot; <span>Field</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-synclogix-tetes-abatteuse.html">Harvester Head Data: from the machine to your office, no USB key required</a></h4>
+              <div class="blog-card__meta"><span>June 10, 2026</span> &middot; <span>Product</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-gps-connectivite-2026.html">GPS and Field Connectivity: What's New for 2026</a></h4>
+              <div class="blog-card__meta"><span>March 12, 2026</span> &middot; <span>Field</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Interested in our solutions?</h2>
+      <p>Contact us for a personalized demonstration.</p>
+      <a href="contact.html" class="btn btn--white">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>G.A. Logix Software</h4>
+          <p>Specialists in software design for foresters. We develop innovative solutions for forestry data collection and management.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>100 route 165 Sud<br>Plessisville, Québec<br>G6L 2Y2</p>
+          <p><a href="/en/contact.html">Contact us</a></p>
+          <p><a href="tel:8192522000">819-252-2000</a></p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/GALogix" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/galogix" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@GALogix" target="_blank" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 G.A. Logix Logiciels inc. All rights reserved. &nbsp;|&nbsp; <a href="/en/politique-confidentialite.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" onclick="if(window.galogixOpenCookieSettings)window.galogixOpenCookieSettings();return false;">Manage my cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav').classList.toggle('nav--open');
+      if (!document.getElementById('nav').classList.contains('nav--open')) {
+        document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+        document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+      }
+    });
+
+    // Mobile dropdown toggle
+    (function() {
+      var isMobile = function() { return window.innerWidth <= 768; };
+      document.querySelectorAll('.nav__item').forEach(function(item) {
+        var dropdown = item.querySelector('.nav__dropdown');
+        if (!dropdown) return;
+        var link = item.querySelector('.nav__link');
+        link.addEventListener('click', function(e) {
+          if (!isMobile()) return;
+          if (!dropdown.classList.contains('nav__dropdown--open')) {
+            document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+            document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+            dropdown.classList.add('nav__dropdown--open');
+            link.classList.add('nav__link--expanded');
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+    window.addEventListener('scroll', function() {
+      document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
