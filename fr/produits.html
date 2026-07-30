@@ -164,7 +164,7 @@
 
     // Mobile dropdown toggle
     (function() {
-      var isMobile = function() { return window.innerWidth <= 768; };
+      var isMobile = function() { return window.matchMedia('(max-width: 75em)').matches; };
       document.querySelectorAll('.nav__item').forEach(function(item) {
         var dropdown = item.querySelector('.nav__dropdown');
         if (!dropdown) return;

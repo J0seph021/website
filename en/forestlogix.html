@@ -4,14 +4,14 @@
 <script src="/js/consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ForestLogix - Forestry Management Platform | G.A. Logix</title>
+  <title>Forestry Worksite Management Software | ForestLogix | G.A. Logix</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
-  <meta name="description" content="ForestLogix — Forestry operations management platform. GPS mapping, worksite management, fleet tracking and real-time cloud synchronization.">
-  <meta property="og:title" content="ForestLogix - Forestry Management Platform | G.A. Logix">
-  <meta property="og:description" content="ForestLogix — Forestry operations management platform. GPS mapping, worksite management, fleet tracking and real-time cloud synchronization.">
+  <meta name="description" content="ForestLogix, the forestry worksite management software: GPS mapping, work orders, logbooks, fuel and payroll. From office to cab, built in Quebec.">
+  <meta property="og:title" content="Forestry Worksite Management Software | ForestLogix | G.A. Logix">
+  <meta property="og:description" content="ForestLogix, the forestry worksite management software: GPS mapping, work orders, logbooks, fuel and payroll. From office to cab, built in Quebec.">
   <meta property="og:image" content="https://www.galogix.ca/images/logo-ga.png">
   <meta property="og:url" content="https://www.galogix.ca/en/forestlogix.html">
   <link rel="canonical" href="https://www.galogix.ca/en/forestlogix.html">
@@ -343,7 +343,7 @@
 
     // Mobile dropdown toggle
     (function() {
-      var isMobile = function() { return window.innerWidth <= 768; };
+      var isMobile = function() { return window.matchMedia('(max-width: 75em)').matches; };
       document.querySelectorAll('.nav__item').forEach(function(item) {
         var dropdown = item.querySelector('.nav__dropdown');
         if (!dropdown) return;
