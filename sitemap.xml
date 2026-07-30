@@ -2,22 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- ==================== FR Pages ==================== -->
-
-  <!-- FR - Index -->
   <url>
-    <loc>https://www.galogix.ca/fr/index.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/fr/</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.galogix.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.galogix.ca/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.galogix.ca/fr/"/>
   </url>
-
-  <!-- FR - Product Pages -->
   <url>
     <loc>https://www.galogix.ca/fr/forestlogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/forestlogix.html"/>
@@ -25,15 +23,31 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/mobilelogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/mobilelogix.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/mobilelogix.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/produits.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/produits.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/produits.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/siglogix.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/siglogix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/siglogix.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/synclogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/synclogix.html"/>
@@ -41,141 +55,127 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/tracklogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/tracklogix.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/tracklogix.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/fr/siglogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/siglogix.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/siglogix.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/produits.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/produits.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/produits.html"/>
-  </url>
-
-  <!-- FR - Guide / Pillar Pages -->
-  <url>
-    <loc>https://www.galogix.ca/fr/guide-logiciel-forestier.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-logiciel-forestier.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-software.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/guide-gps-forestier.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-gps-forestier.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-gps.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/guide-entrepreneur-forestier.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-entrepreneur-forestier.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-contractor.html"/>
-  </url>
-  <url>
     <loc>https://www.galogix.ca/fr/guide-collecte-donnees-terrain.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-collecte-donnees-terrain.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-field-data-collection.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/guide-entrepreneur-forestier.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-entrepreneur-forestier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-contractor.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/guide-gps-forestier.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-gps-forestier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-gps.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/guide-logiciel-forestier.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-logiciel-forestier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-software.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/guide-suivi-reboisement.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-suivi-reboisement.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/reforestation-tracking-software.html"/>
   </url>
-
-  <!-- FR - Other Pages -->
+  <url>
+    <loc>https://www.galogix.ca/fr/solutions.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/solutions.html"/>
+  </url>
   <url>
     <loc>https://www.galogix.ca/fr/a-propos.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/a-propos.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/a-propos.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/fr/services.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/services.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/services.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/solutions.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/solutions.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/solutions.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/developpement.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/developpement.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/portfolio.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/portfolio.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/fr/contact.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/contact.html"/>
-  </url>
-  <url>
     <loc>https://www.galogix.ca/fr/actualites.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/actualites.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/actualites.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/contact.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/developpement.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/developpement.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/membres.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/membres.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/membres.html"/>
   </url>
-
-  <!-- FR - Blog Posts -->
+  <url>
+    <loc>https://www.galogix.ca/fr/politique-confidentialite.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.galogix.ca/fr/politique-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.galogix.ca/en/privacy-policy.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/portfolio.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/services.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/services.html"/>
+  </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-forestlogix-4.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-forestlogix-4.html"/>
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-forestlogix-donnees-gouvernementales.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-forestlogix-donnees-gouvernementales.html"/>
@@ -191,7 +191,7 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-gps-connectivite-2026.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-gps-connectivite-2026.html"/>
@@ -199,15 +199,23 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-gps-pratiques.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-gps-pratiques.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-gps-pratiques.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/blog-mobilelogix-carburant.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-carburant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-carburant.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/blog-mobilelogix-ia.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-ia.html"/>
@@ -215,69 +223,66 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-mobilelogix-performance.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-performance.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-performance.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/fr/blog-tracklogix-reboisement.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/fr/blog-punch-forestier-terrain-paie.html</loc>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-tracklogix-reboisement.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-punch-forestier-terrain-paie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-forestry-time-tracking-payroll.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-3-plateformes.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/fr/blog-mobilelogix-carburant.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-carburant.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-carburant.html"/>
-  </url>
-  <url>
     <loc>https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/blog-tracklogix-reboisement.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-tracklogix-reboisement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/blog-transformation-numerique.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-transformation-numerique.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-transformation-numerique.html"/>
   </url>
-
-  <!-- ==================== EN Pages ==================== -->
-
-  <!-- EN - Index -->
   <url>
-    <loc>https://www.galogix.ca/en/index.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/en/</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.galogix.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.galogix.ca/en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.galogix.ca/fr/"/>
   </url>
-
-  <!-- EN - Product Pages -->
   <url>
     <loc>https://www.galogix.ca/en/forestlogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/forestlogix.html"/>
@@ -285,15 +290,31 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/en/mobilelogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/mobilelogix.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/mobilelogix.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/en/produits.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/produits.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/produits.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/siglogix.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/siglogix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/siglogix.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/en/synclogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/synclogix.html"/>
@@ -301,171 +322,151 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/en/tracklogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/tracklogix.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/tracklogix.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/en/siglogix.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/siglogix.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/siglogix.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/produits.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/produits.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/produits.html"/>
-  </url>
-
-  <!-- EN - Guide / Pillar Pages -->
-  <url>
-    <loc>https://www.galogix.ca/en/guide-forestry-software.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/en/forestry-software-new-brunswick.html</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-logiciel-forestier.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-software.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/forestry-software-new-brunswick.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/index.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/en/guide-forestry-gps.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/en/forestry-software-northeast-us.html</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-gps-forestier.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-gps.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/forestry-software-northeast-us.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/forestry-software-ontario.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/forestry-software-ontario.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/guide-field-data-collection.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-collecte-donnees-terrain.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-field-data-collection.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/en/guide-forestry-contractor.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-entrepreneur-forestier.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-contractor.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/en/guide-field-data-collection.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/en/guide-forestry-gps.html</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-collecte-donnees-terrain.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-field-data-collection.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-gps-forestier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-gps.html"/>
   </url>
-
-  <!-- EN - Guide / Pillar Pages (EN-only) -->
+  <url>
+    <loc>https://www.galogix.ca/en/guide-forestry-software.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-logiciel-forestier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/guide-forestry-software.html"/>
+  </url>
   <url>
     <loc>https://www.galogix.ca/en/reforestation-tracking-software.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/reforestation-tracking-software.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/guide-suivi-reboisement.html"/>
   </url>
-
-  <!-- EN - Regional Pages -->
   <url>
-    <loc>https://www.galogix.ca/en/forestry-software-ontario.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/en/solutions.html</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/solutions.html"/>
   </url>
-  <url>
-    <loc>https://www.galogix.ca/en/forestry-software-new-brunswick.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/forestry-software-northeast-us.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- EN - Other Pages -->
   <url>
     <loc>https://www.galogix.ca/en/a-propos.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/a-propos.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/a-propos.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/en/services.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/services.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/services.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/solutions.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/solutions.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/solutions.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/developpement.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/developpement.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/developpement.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/portfolio.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/portfolio.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/portfolio.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/contact.html</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/contact.html"/>
-  </url>
-  <url>
     <loc>https://www.galogix.ca/en/actualites.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/actualites.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/actualites.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/en/contact.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/developpement.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/developpement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/developpement.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/en/membres.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/membres.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/membres.html"/>
   </url>
-
-  <!-- EN - Blog Posts -->
   <url>
-    <loc>https://www.galogix.ca/en/blog-siglogix-3-plateformes.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <loc>https://www.galogix.ca/en/portfolio.html</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-3-plateformes.html"/>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/privacy-policy.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.galogix.ca/fr/politique-confidentialite.html"/>
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.galogix.ca/en/privacy-policy.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/services.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/services.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-forestlogix-4.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-forestlogix-4.html"/>
@@ -473,15 +474,23 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-forestlogix-donnees-gouvernementales.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-forestlogix-donnees-gouvernementales.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-forestlogix-donnees-gouvernementales.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/en/blog-forestry-time-tracking-payroll.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-punch-forestier-terrain-paie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-forestry-time-tracking-payroll.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/en/blog-gps-connectivite-2026.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-gps-connectivite-2026.html"/>
@@ -489,15 +498,23 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-gps-pratiques.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-gps-pratiques.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-gps-pratiques.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/en/blog-mobilelogix-carburant.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-carburant.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-carburant.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/en/blog-mobilelogix-ia.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-ia.html"/>
@@ -505,39 +522,39 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-mobilelogix-performance.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-performance.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-performance.html"/>
   </url>
   <url>
-    <loc>https://www.galogix.ca/en/blog-tracklogix-reboisement.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://www.galogix.ca/en/blog-siglogix-3-plateformes.html</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-tracklogix-reboisement.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
-  </url>
-  <url>
-    <loc>https://www.galogix.ca/en/blog-mobilelogix-carburant.html</loc>
-    <lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-carburant.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-carburant.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-siglogix-3-plateformes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-siglogix-3-plateformes.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-synclogix-tetes-abatteuse.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-synclogix-tetes-abatteuse.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/en/blog-tracklogix-reboisement.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-tracklogix-reboisement.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-tracklogix-reboisement.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/en/blog-transformation-numerique.html</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-transformation-numerique.html"/>
