@@ -122,8 +122,10 @@ p { margin-bottom: 1rem; }
 .logo:hover img { transform: scale(1.05); }
 
 /* Navigation */
-.nav { display: flex; align-items: center; gap: 0; }
-.nav__item { position: relative; }
+/* Les .nav__item sont des <li> enfants directs de <nav> (sans <ul>) : la regle
+   `ul { list-style: none }` ne les couvre pas, d'ou les puces grises. */
+.nav { display: flex; align-items: center; gap: 0; list-style: none; }
+.nav__item { position: relative; list-style: none; }
 .nav__link {
   display: block;
   padding: 0.5rem 0.55rem;
