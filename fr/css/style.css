@@ -1016,3 +1016,6 @@ select.form-input {
   .hero h1 { font-size: 1.8rem; }
   .stats__grid { grid-template-columns: 1fr; }
 }
+
+/* Contenu principal d'article visible au chargement (pas de scroll requis pour lire le texte) */
+.article.fade-up { opacity: 1; transform: none; }
