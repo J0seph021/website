@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/actualites.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/actualites.html"/>
@@ -172,6 +172,14 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/services.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/services.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/fr/blog-carte-en-ligne-partagee.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-carte-en-ligne-partagee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-shared-online-map-layer.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-forestlogix-4.html</loc>
@@ -410,7 +418,7 @@
   </url>
   <url>
     <loc>https://www.galogix.ca/en/actualites.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/actualites.html"/>
@@ -527,6 +535,14 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-mobilelogix-performance.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-performance.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/blog-shared-online-map-layer.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-carte-en-ligne-partagee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-shared-online-map-layer.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-siglogix-3-plateformes.html</loc>
