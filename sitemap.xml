@@ -238,6 +238,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-mobilelogix-performance.html"/>
   </url>
   <url>
+    <loc>https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html"/>
+  </url>
+  <url>
     <loc>https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>

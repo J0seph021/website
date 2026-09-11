@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<script src="/js/consent.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le PDF géoréférencé au terrain, aligné et hors ligne | G.A. Logix</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="description" content="La carte d'opération vient du donneur d'ouvrage, en PDF, et tu ne choisis pas le format. Voici quoi en faire une fois rendu au bloc.">
+  <meta property="og:title" content="La carte que tu n'as pas faite | G.A. Logix">
+  <meta property="og:description" content="La carte d'opération vient du donneur d'ouvrage, en PDF, et tu ne choisis pas le format. Voici quoi en faire une fois rendu au bloc.">
+  <meta property="og:image" content="https://www.galogix.ca/fr/images/pdf-georeference-carte-terrain-hero.jpg">
+  <meta property="og:url" content="https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html">
+  <link rel="canonical" href="https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "La carte que tu n'as pas faite",
+    "datePublished": "2026-08-31",
+    "image": "https://www.galogix.ca/fr/images/pdf-georeference-carte-terrain-hero.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.galogix.ca/images/logo-ga.png"
+      }
+    },
+    "mainEntityOfPage": "https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.96rem; }
+    .article th, .article td { border:1px solid #e5e0cd; padding:10px 14px; text-align:left; vertical-align:top; }
+    .article th { background:#1E3A5F; color:#fff; font-weight:600; }
+    .article tbody tr:nth-child(even){ background:#faf8f1; }
+    .article__table-wrap { overflow-x:auto; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-ga.png" alt="G.A. Logix">G.A. Logix Logiciels</a>
+      <nav class="nav" id="nav">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Accueil</a>
+        </li>
+        <li class="nav__item">
+          <a href="a-propos.html" class="nav__link">À propos de nous &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="membres.html">Membres fondateurs</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="solutions.html" class="nav__link">Solutions &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="forestlogix.html">ForestLogix</a>
+            <a href="mobilelogix.html">MobileLogix</a>
+            <a href="synclogix.html">SyncLogix</a>
+            <a href="tracklogix.html">TrackLogix</a>
+            <a href="siglogix.html">SIGLogix</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="produits.html" class="nav__link">Produits &amp; Services &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="produits.html">Nos produits</a>
+            <a href="developpement.html">Développement personnalisé</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="actualites.html" class="nav__link nav__link--active">Actualités</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Nous joindre</a>
+        </li>
+        <li class="nav__item"><a href="https://espace.galogix.ca/connexion" class="nav__link nav__link--portal">Espace client</a></li>
+        <li class="nav__item nav__item--lang">
+          <a href="../en/actualites.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','en')">EN</a>
+        </li>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('images/pdf-georeference-carte-terrain-hero.jpg');"></div>
+    <div class="hero__content">
+      <h1>La carte que tu n'as pas faite</h1>
+      <p>Celle qui arrive du donneur d'ouvrage, en PDF, dans un format que tu ne choisis pas.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="article fade-up">
+
+        <a href="actualites.html" class="article__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Retour aux actualités
+        </a>
+
+        <div class="article__meta">
+          <span class="article__tag">Cartographie</span>
+          <span>31 août 2026</span>
+        </div>
+
+        <p>Il y a deux sortes de cartes dans une opération forestière.</p>
+        <p>Il y a celles que tu produis. Ton équipe les monte, tu contrôles le format, tu décides comment elles circulent.</p>
+        <p>Et il y a celles que tu reçois. La carte d'opération que le donneur d'ouvrage t'envoie avec le contrat, la prescription signée par son ingénieure, le plan du secteur avec les zones sensibles déjà tracées. Celles-là arrivent en PDF, et tu ne choisis pas.</p>
+        <p>Tu ne vas pas rappeler ton client pour lui expliquer comment il devrait produire ses cartes. Il te donne du travail, tu prends la carte comme elle vient.</p>
+        <p>C'est de ces cartes-là qu'on parle ici.</p>
+
+        <h2>Deux problèmes différents, deux réponses différentes</h2>
+        <p>On a déjà écrit sur le fichier qui voyage par courriel et qui finit en quatre versions contradictoires, et sur la façon d'en sortir avec une couche partagée en ligne. Si le problème est ta propre donnée, c'est encore la meilleure réponse, et <a href="blog-carte-en-ligne-partagee.html">c'est dans cet article-là</a>.</p>
+        <p>Mais cette réponse suppose que tu contrôles les deux bouts de la chaîne. Quand la carte vient de ton client, tu n'en contrôles aucun. Tu reçois un PDF, point. La question n'est plus « comment faire circuler ma donnée », c'est « qu'est-ce que je fais avec un document produit par quelqu'un d'autre, dans un format que je n'ai pas choisi ».</p>
+
+        <h2>Ce que ForestLogix fait avec ce PDF</h2>
+        <p>Tu le déposes dans le chantier, et il devient un fond de carte.</p>
+        <p>Pas un document que tu ouvres à côté. Un fond de carte, sous ta position GPS, aux vraies coordonnées. ForestLogix lit le géoréférencement contenu dans le fichier, le découpe en tuiles à l'interne, et l'affiche par-dessus le fond de base. Après, c'est une couche comme les autres: tu l'allumes, tu l'éteins, tu zoomes dessus, tu l'enlèves.</p>
+        <p>Elle est rattachée au chantier, donc elle arrive sur la tablette de toute l'équipe. Et elle est stockée sur l'appareil, donc elle s'affiche sans réseau.</p>
+        <p>Une seule condition: le PDF doit être géoréférencé. Un PDF ordinaire est une image, il n'a aucune idée d'où il se trouve sur la terre. Un PDF géoréférencé, souvent appelé GeoPDF, transporte en plus les coordonnées qui disent à quoi correspond chaque coin de la page.</p>
+
+        <h2>Pourquoi le PDF marche bien pour ça</h2>
+        <p>Le PDF géoréférencé n'est pas la seule porte d'entrée pour un fond de carte dans ForestLogix. Tu peux aussi charger des tuiles déjà préparées, ou brancher un service de cartes en ligne. Chaque chemin a sa situation.</p>
+        <p>Celui-là tombe pile quand la carte vient de l'extérieur, pour deux raisons.</p>
+        <p><strong>La première: tout le monde sait déjà en faire un.</strong> Exporter un PDF géoréférencé, ce n'est pas une compétence à acquérir. C'est une commande qui existe depuis toujours dans ArcGIS et dans QGIS, et que chaque technicien a déjà utilisée cent fois. Personne n'a de nouveau flux de travail à apprendre, personne n'a de serveur à monter, et surtout, tu n'as rien à demander à ton client. Il fait ce qu'il fait déjà.</p>
+        <p><strong>La deuxième: la symbologie arrive intacte.</strong> C'est la vraie affaire. Faire voyager une symbologie d'un logiciel de cartographie à un autre, c'est un des problèmes les plus coûteux du métier. Les couleurs et les motifs ne ressortent jamais tout à fait pareils de l'autre côté, la légende ne correspond plus, et la carte qu'on regarde au terrain n'est plus celle que l'ingénieure a dessinée. Un PDF ne transporte pas la donnée brute, il transporte le rendu. Il n'y a donc rien à traduire, rien à reconfigurer, rien à perdre. Ce que tu vois dans la cabine est exactement ce qu'elle voyait à l'écran.</p>
+        <p>Et le compromis est le même mécanisme. Si la fidélité est parfaite, c'est précisément parce que le PDF porte une image et non des entités. C'est pour ça que tu ne peux pas cliquer dessus pour lire des attributs. On échange la possibilité d'interroger la carte contre une fidélité exacte et zéro configuration. Pour une carte reçue, que tu consultes et que tu ne modifies pas, c'est le bon échange.</p>
+
+        <h2>Le nord et le dézoom</h2>
+        <p>Deux comportements à savoir, parce qu'ils changent ce que l'opérateur voit.</p>
+        <p><strong>Le nord.</strong> L'orientation est déduite des coordonnées projetées du fichier, pas de la façon dont le producteur a écrit ses axes. La carte arrive donc dans le bon sens, même quand elle vient d'un outil configuré à la mode de quelqu'un d'autre.</p>
+        <p><strong>Le dézoom.</strong> Un opérateur qui se demande où il est recule à la vue régionale. La carte reste affichée jusqu'à la vue large, au lieu de disparaître au moment où il en a besoin.</p>
+
+        <h2>Ce que ça ne fait pas</h2>
+        <p>Ça ne génère pas de carte. Tu fournis le PDF, ForestLogix l'affiche. La cartographie se fait encore dans un outil SIG, et pour la préparation avancée tu restes dans SigLogix, QGIS ou ArcGIS Pro.</p>
+        <p>Et si le PDF que tu as reçu n'est pas géoréférencé, il ne se placera pas au bon endroit. Il n'y a rien dedans qui dise où il est. Ça vaut la peine de le demander à ton client la prochaine fois: pour lui, c'est une case à cocher de plus à l'export.</p>
+
+        <h2>Et les applications de cartes, là-dedans</h2>
+        <p>Beaucoup de forestiers ouvrent leurs PDF au terrain avec une application dédiée, comme Avenza. Ce sont de bons outils, et pour quelqu'un qui a seulement besoin de regarder une carte, ça fait la job.</p>
+        <p>La question n'est pas laquelle est le meilleur visualiseur. C'est de savoir où la carte reçue doit vivre. Si tes opérateurs enregistrent déjà leurs traces, remplissent leurs formulaires, pointent leurs heures et reçoivent leurs bons de travail dans ForestLogix, la carte du donneur d'ouvrage n'a pas de raison d'être le seul morceau de la job qui vit dans une application à part, avec son propre compte et sa propre logique.</p>
+        <p>C'est une couche de plus dans l'outil que ton équipe ouvre déjà chaque matin.</p>
+
+        <h2>Essaie avec ta propre carte</h2>
+        <p>Le meilleur test n'est pas une démo sur nos données. C'est la dernière carte que ton donneur d'ouvrage t'a envoyée, ouverte sur une tablette.</p>
+        <p><a href="contact.html">Demande une démo</a> et apporte-la. On la dépose devant toi et tu vois si elle tombe à la bonne place, avec les bonnes couleurs.</p>
+        <p>Conçu et codé à Plessisville.</p>
+
+<!-- ARTICLES RÉCENTS -->
+        <div class="related-posts fade-up">
+          <h3>Articles récents</h3>
+          <div class="columns columns--3">
+            <div class="related-post-card">
+              <h4><a href="blog-carte-en-ligne-partagee.html">Fini le shapefile par courriel: la carte en ligne partagée</a></h4>
+              <div class="blog-card__meta"><span>18 août 2026</span> &middot; <span>Cartographie</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-siglogix-3-plateformes.html">SigLogix: la même carte SIG sur QGIS, ArcMap et ArcGIS Pro</a></h4>
+              <div class="blog-card__meta"><span>10 juin 2026</span> &middot; <span>Produit</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-gps-pratiques.html">GPS forestier: les bonnes pratiques au terrain</a></h4>
+              <div class="blog-card__meta"><span>Guide</span> &middot; <span>Terrain</span></div>
+            </div>
+          </div>
+        </div>
+            <div class="related-post-card">
+              <h4><a href="blog-synclogix-tetes-abatteuse.html">SyncLogix: récupérer les données de tête d'abatteuse</a></h4>
+              <div class="blog-card__meta"><span>10 juin 2026</span> &middot; <span>Produit</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-punch-forestier-terrain-paie.html">Le punch forestier, du terrain à la paie</a></h4>
+              <div class="blog-card__meta"><span>6 juillet 2026</span> &middot; <span>Terrain</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Intéressé par nos solutions?</h2>
+      <p>Contactez-nous pour une démonstration personnalisée.</p>
+      <a href="contact.html" class="btn btn--white">Contactez-nous</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>G.A. Logix Logiciels</h4>
+          <p>Spécialistes de la conception de logiciels pour les forestiers. Nous développons des solutions innovantes pour la collecte et la gestion de données forestières.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>100 route 165 Sud<br>Plessisville, Québec<br>G6L 2Y2</p>
+          <p><a href="/fr/contact.html">Nous contacter</a></p>
+          <p><a href="tel:8192522000">819-252-2000</a></p>
+        </div>
+        <div>
+          <h4>Suivez-nous</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/GALogix" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/galogix" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@GALogix" target="_blank" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 G.A. Logix Logiciels inc. Tous droits réservés. &nbsp;|&nbsp; <a href="/fr/politique-confidentialite.html">Politique de confidentialité</a> &nbsp;|&nbsp; <a href="#" onclick="if(window.galogixOpenCookieSettings)window.galogixOpenCookieSettings();return false;">Gérer mes cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav').classList.toggle('nav--open');
+      if (!document.getElementById('nav').classList.contains('nav--open')) {
+        document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+        document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+      }
+    });
+
+    // Mobile dropdown toggle
+    (function() {
+      var isMobile = function() { return window.matchMedia('(max-width: 75em)').matches; };
+      document.querySelectorAll('.nav__item').forEach(function(item) {
+        var dropdown = item.querySelector('.nav__dropdown');
+        if (!dropdown) return;
+        var link = item.querySelector('.nav__link');
+        link.addEventListener('click', function(e) {
+          if (!isMobile()) return;
+          if (!dropdown.classList.contains('nav__dropdown--open')) {
+            document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+            document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+            dropdown.classList.add('nav__dropdown--open');
+            link.classList.add('nav__link--expanded');
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+    window.addEventListener('scroll', function() {
+      document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
