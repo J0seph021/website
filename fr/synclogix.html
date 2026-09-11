@@ -4,14 +4,14 @@
 <script src="/js/consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SyncLogix - Synchronisation de données | G.A. Logix</title>
+  <title>SyncLogix : les données de vos têtes d'abattage | G.A. Logix</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="manifest" href="../site.webmanifest">
-  <meta name="description" content="SyncLogix — Synchronisation en temps réel entre le terrain et le bureau. Mode hors ligne Bluetooth pour les zones forestières sans connectivité.">
+  <meta name="description" content="Rassemblez les données de production de vos têtes d'abattage Komatsu, Ponsse, Log Max et John Deere dans un seul tableau de bord, sans ressaisie.">
   <meta property="og:title" content="SyncLogix - Synchronisation de données | G.A. Logix">
-  <meta property="og:description" content="SyncLogix — Synchronisation en temps réel entre le terrain et le bureau. Mode hors ligne Bluetooth pour les zones forestières sans connectivité.">
+  <meta property="og:description" content="Rassemblez les données de production de vos têtes d'abattage Komatsu, Ponsse, Log Max et John Deere dans un seul tableau de bord, sans ressaisie.">
   <meta property="og:image" content="https://www.galogix.ca/images/logo-ga.png">
   <meta property="og:url" content="https://www.galogix.ca/fr/synclogix.html">
   <link rel="canonical" href="https://www.galogix.ca/fr/synclogix.html">
@@ -27,7 +27,7 @@
     "name": "SyncLogix",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Windows, Android",
-    "description": "Synchronisation en temps réel entre le terrain et le bureau. Mode hors ligne Bluetooth pour les zones forestières sans connectivité.",
+    "description": "Rassemblez les données de production de vos têtes d'abattage Komatsu, Ponsse, Log Max et John Deere dans un seul tableau de bord, sans ressaisie.",
     "url": "https://www.galogix.ca/fr/synclogix.html",
     "offers": {
       "@type": "Offer",
@@ -112,7 +112,7 @@
     <div class="hero__bg" style="background-image: url('images/hero-forest.jpg');"></div>
     <div class="hero__content">
       <h1>SyncLogix</h1>
-      <p>Synchronisez vos données entre le terrain et le bureau en temps réel</p>
+      <p>Les données de vos têtes d'abattage, toutes marques confondues, dans un seul tableau de bord</p>
       <a href="contact.html" class="btn btn--hero">Demander une démo</a>
     </div>
   </section>
@@ -122,62 +122,121 @@
     <div class="container">
       <div class="feature fade-up">
         <div class="feature__text">
-          <h2>Vos données, toujours à jour</h2>
-          <p>SyncLogix assure la circulation fluide de toutes vos données entre les appareils de terrain et vos systèmes de bureau. Grâce à la synchronisation en temps réel via le nuage et au mode de repli Bluetooth pour les zones sans connectivité, vos équipes disposent toujours des informations les plus récentes.</p>
-          <p>Plus besoin de transférer manuellement des fichiers ou de ressaisir des données au bureau. SyncLogix élimine les doublons, les pertes de données et les délais de transmission pour une efficacité opérationnelle maximale.</p>
+          <h2>Vos machines produisent déjà ces données</h2>
+          <p>Chaque tête d'abattage mesure ce qu'elle récolte, tige par tige : essence, diamètre, longueur, volume, opérateur, moment de la coupe. Ces mesures restent presque toujours dans la machine, dans un format que personne n'ouvre au bureau.</p>
+          <p>SyncLogix va les chercher directement dans les bases de données embarquées de vos machines et les rassemble dans un seul tableau de bord. Komatsu, Ponsse, Log Max et John Deere se retrouvent dans la même vue, avec les mêmes essences et les mêmes unités, même si chaque constructeur les nomme à sa façon.</p>
+          <p>Vous n'avez rien à ressaisir. Vous déposez les fichiers de vos machines, et le portrait de la récolte apparaît.</p>
         </div>
         <div class="feature__img">
-          <img src="images/synclogixx.png" alt="SyncLogix - Synchronisation de données">
+          <img src="images/synclogix-dashboard-vue-ensemble.png" alt="Tableau de bord SyncLogix : billots, volume, diamètre moyen, production quotidienne et répartition par essence">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== COMMENT ÇA FONCTIONNE ===== -->
+  <!-- ===== COMPARER LES MACHINES ===== -->
   <section class="section section--gray">
     <div class="container">
+      <div class="feature feature--reverse fade-up">
+        <div class="feature__text">
+          <h2>Une flotte, pas une machine à la fois</h2>
+          <p>Chargez autant de machines que vous voulez. SyncLogix les met côte à côte : volume, nombre de billots, séances de travail et productivité en mètres cubes par séance.</p>
+          <p>C'est la comparaison que vos rapports de fin de mois ne donnent pas. Pourquoi une abatteuse sort 181 m³ par séance et l'autre 110, sur les mêmes blocs, avec les mêmes essences.</p>
+        </div>
+        <div class="feature__img">
+          <img src="images/synclogix-dashboard-comparaison.png" alt="Comparaison de trois machines : volume, billots, séances et productivité">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CE QUE VOUS VOYEZ ===== -->
+  <section class="section">
+    <div class="container">
       <div class="section-heading fade-up">
-        <h2>Comment ça fonctionne</h2>
-        <p>Un processus simple en quatre étapes pour garder vos données synchronisées</p>
+        <h2>Ce que vous y lisez</h2>
+        <p>Filtrez par période, par machine, par opérateur, par essence ou par chantier. Tous les écrans suivent.</p>
       </div>
       <div class="columns columns--2">
         <div class="card fade-up">
-          <h3 class="card__title">Étape 1 — Collecte sur le terrain</h3>
-          <p>Les données sont captées directement sur les tablettes et les téléphones de vos équipes : traces GPS, feuilles de temps, photos géoréférencées, bons de travail, production et livraisons. Tout est enregistré localement sur l'appareil en temps réel.</p>
+          <h3 class="card__title">Production</h3>
+          <p>Volume par machine, par chantier, par essence, par produit et par opérateur. Production quotidienne et évolution sur toute la période. Volume moyen par tige.</p>
         </div>
         <div class="card fade-up">
-          <h3 class="card__title">Étape 2 — Synchronisation nuage</h3>
-          <p>Dès qu'une connexion internet est disponible, les données se synchronisent automatiquement avec le serveur nuage. Aucune intervention manuelle n'est requise. Les données sont transmises de façon sécurisée et instantanée.</p>
+          <h3 class="card__title">Dimensions</h3>
+          <p>Distribution des diamètres et des longueurs sur l'ensemble de la récolte. Comparez les longueurs réellement produites à vos longueurs cibles d'usine, avec vos propres tolérances.</p>
         </div>
         <div class="card fade-up">
-          <h3 class="card__title">Étape 3 — Synchronisation Bluetooth hors ligne</h3>
-          <p>En zone sans couverture cellulaire, la synchronisation Bluetooth bidirectionnelle prend le relais. Les tablettes montées sur les équipements échangent les données avec les téléphones Android des opérateurs à proximité, assurant la continuité du flux d'information.</p>
+          <h3 class="card__title">Calibration des têtes</h3>
+          <p>Le journal des ajustements de diamètre et de longueur, machine par machine, avec la date du dernier contrôle. Vous savez depuis combien de temps une tête n'a pas été vérifiée.</p>
         </div>
         <div class="card fade-up">
-          <h3 class="card__title">Étape 4 — Disponible au bureau</h3>
-          <p>Toutes les données collectées sont disponibles instantanément sur la version bureau de ForestLogix. Générez vos rapports, analysez la production et gérez vos opérations avec des données toujours à jour, sans délai ni ressaisie.</p>
+          <h3 class="card__title">Revenus</h3>
+          <p>Entrez vos prix par produit et le volume récolté devient une valeur, ventilée par machine et par produit. Le prix moyen au mètre cube suit automatiquement.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FONCTIONNALITÉS CLÉS ===== -->
+  <!-- ===== CARTE ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="feature fade-up">
+        <div class="feature__text">
+          <h2>Où le bois a été coupé</h2>
+          <p>Quand vos machines enregistrent leur position, SyncLogix place chaque tige sur la carte et trace le parcours de la machine dans le bloc.</p>
+          <p>Colorez les points par essence ou par produit pour voir d'un coup d'œil comment le peuplement se répartit sur le terrain, et où votre machine a réellement travaillé.</p>
+        </div>
+        <div class="feature__img">
+          <img src="images/synclogix-dashboard-carte.png" alt="Carte des opérations : traces GPS des machines colorées par essence">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALERTES ===== -->
   <section class="section">
     <div class="container">
       <div class="feature feature--reverse fade-up">
         <div class="feature__text">
-          <h2>Fonctionnalités clés</h2>
-          <p>SyncLogix offre un ensemble complet de fonctionnalités pour assurer la fiabilité et la disponibilité de vos données en tout temps.</p>
-          <ul>
-            <li>Synchronisation en temps réel via le nuage sur toutes les plateformes (bureau, tablette, Android, iPhone)</li>
-            <li>Synchronisation Bluetooth hors ligne bidirectionnelle entre les tablettes et les téléphones Android</li>
-            <li>Partage automatique des données à travers tous les appareils de l'entreprise</li>
-            <li>Synchronisation WIFI à venir prochainement (remplacement de l'exigence Bluetooth)</li>
-            <li>Synchronisation WFS en direct avec ArcGIS Online pour les données géospatiales</li>
-          </ul>
+          <h2>Le tableau de bord vous dit ce qui cloche</h2>
+          <p>Vous n'avez pas à éplucher les graphiques pour trouver le problème. À l'ouverture, un centre d'alertes analyse ce que vous venez de charger et vous dit en une phrase ce qui va bien et ce qui mérite un coup d'oeil.</p>
+          <p>Il vous dit aussi ce qu'il ne peut pas savoir. Si vos fichiers ne contiennent pas de tige de contrôle, il vous le dit plutôt que d'afficher une précision inventée. Vous savez toujours sur quoi repose le chiffre que vous regardez.</p>
         </div>
         <div class="feature__img">
-          <img src="images/synclogix-cloud.png" alt="SyncLogix - Fonctionnalités clés">
+          <img src="images/synclogix-dashboard-alertes.png" alt="Centre d'alertes de SyncLogix : production, calibration et répartition des produits">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUITS ET ESSENCES ===== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="feature fade-up">
+        <div class="feature__text">
+          <h2>Deux machines, deux façons de nommer le même produit</h2>
+          <p>Une machine écrit « Pitoune », l'autre écrit « Pâte ». Sans correction, votre rapport compte deux produits là où il n'y en a qu'un.</p>
+          <p>SyncLogix regroupe automatiquement les libellés équivalents et vous laisse fusionner à la main ceux qu'il n'a pas reconnus. Vos totaux par produit sont justes avant même que vous ouvriez le premier graphique.</p>
+        </div>
+        <div class="feature__img">
+          <img src="images/synclogix-dashboard-production.png" alt="Regroupement des libellés de produits, volume par chantier et distribution des diamètres">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SYNCHRONISATION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="feature feature--reverse fade-up">
+        <div class="feature__text">
+          <h2>Et le reste de vos données terrain</h2>
+          <p>SyncLogix assure aussi la circulation des données saisies par vos équipes entre les appareils de terrain et le bureau : traces GPS, feuilles de temps, photos géoréférencées, bons de travail et livraisons.</p>
+          <p>La synchronisation se fait par le nuage dès qu'une connexion est disponible. En zone sans couverture cellulaire, le relais Bluetooth bidirectionnel prend le relais entre les tablettes montées sur les équipements et les téléphones Android des opérateurs.</p>
+        </div>
+        <div class="feature__img">
+          <img src="images/synclogix-cloud.png" alt="SyncLogix - Synchronisation terrain et bureau">
         </div>
       </div>
     </div>
@@ -189,14 +248,21 @@
       <div class="feature fade-up">
         <div class="feature__text">
           <h2>Compatibilité</h2>
-          <p>SyncLogix est intégré à l'ensemble de l'écosystème ForestLogix et fonctionne de façon transparente avec toutes les versions de la plateforme.</p>
+          <p>Du côté des machines, SyncLogix lit les données de production des principales marques présentes en forêt québécoise :</p>
+          <ul>
+            <li>Komatsu</li>
+            <li>Ponsse</li>
+            <li>Log Max</li>
+            <li>John Deere</li>
+          </ul>
+          <p>Du côté du bureau et du terrain, il est intégré à l'ensemble de l'écosystème ForestLogix :</p>
           <ul>
             <li>ForestLogix Bureau (Windows)</li>
             <li>ForestLogix Tablette (Windows)</li>
             <li>ForestLogix Android</li>
             <li>ForestLogix iPhone</li>
           </ul>
-          <p>Au niveau matériel, SyncLogix est compatible avec les tablettes Windows Emdoor et les tablettes Android Topicon, offrant une fiabilité éprouvée dans les conditions exigeantes du terrain forestier.</p>
+          <p>Au niveau matériel, SyncLogix est compatible avec les tablettes Windows Emdoor et les tablettes Android Topicon, éprouvées dans les conditions du terrain forestier.</p>
         </div>
         <div class="feature__img">
           <img src="images/architecture-modules.png" alt="SyncLogix - Compatibilité multiplateforme">
