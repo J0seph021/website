@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<script src="/js/consent.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planifier ses chemins de débardage sans marcher le bloc | G.A. Logix</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="description" content="Un avant-midi à pied pour décider par où passer. TimberTrail calcule vos chemins de débardage dans ForestLogix et MobileLogix, sur tablette comme sur téléphone.">
+  <meta property="og:title" content="Planifier ses chemins de débardage sans marcher le bloc | G.A. Logix">
+  <meta property="og:description" content="L'algorithme TimberTrail calcule vos chemins de débardage avec la pente, l'eau et les limites de secteur comme critères. Dans ForestLogix et MobileLogix.">
+  <meta property="og:image" content="https://www.galogix.ca/fr/images/timbertrail-hero.jpg">
+  <meta property="og:url" content="https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html">
+  <link rel="canonical" href="https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html">
+  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-plan-skidding-trails-without-walking-block.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Planifier ses chemins de débardage sans marcher le bloc",
+    "datePublished": "2026-09-10",
+    "image": "https://www.galogix.ca/fr/images/timbertrail-hero.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.galogix.ca/images/logo-ga.png"
+      }
+    },
+    "mainEntityOfPage": "https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.96rem; }
+    .article th, .article td { border:1px solid #e5e0cd; padding:10px 14px; text-align:left; vertical-align:top; }
+    .article th { background:#1E3A5F; color:#fff; font-weight:600; }
+    .article tbody tr:nth-child(even){ background:#faf8f1; }
+    .article__table-wrap { overflow-x:auto; }
+    .article figure { margin:2rem 0; }
+    .article figure img { width:100%; border-radius:6px; display:block; }
+    .article figcaption { font-size:0.9rem; color:#6b6858; margin-top:0.6rem; font-style:italic; text-align:center; }
+    .article__steps { counter-reset:etape; list-style:none; padding:0; margin:1.5rem 0; }
+    .article__steps li { counter-increment:etape; position:relative; padding:0 0 1.1rem 3.1rem; }
+    .article__steps li::before { content:counter(etape); position:absolute; left:0; top:-2px;
+      width:2.1rem; height:2.1rem; border-radius:50%; background:#1E3A5F; color:#fff;
+      font-weight:700; display:flex; align-items:center; justify-content:center; font-size:0.95rem; }
+    .article__note { border-left:4px solid #1E3A5F; background:#faf8f1; padding:1rem 1.3rem; margin:1.8rem 0; border-radius:0 4px 4px 0; }
+    .article__note p:last-child { margin-bottom:0; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-ga.png" alt="G.A. Logix">G.A. Logix Logiciels</a>
+      <nav class="nav" id="nav">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Accueil</a>
+        </li>
+        <li class="nav__item">
+          <a href="a-propos.html" class="nav__link">À propos de nous &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="membres.html">Membres fondateurs</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="solutions.html" class="nav__link">Solutions &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="forestlogix.html">ForestLogix</a>
+            <a href="mobilelogix.html">MobileLogix</a>
+            <a href="synclogix.html">SyncLogix</a>
+            <a href="tracklogix.html">TrackLogix</a>
+            <a href="siglogix.html">SIGLogix</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="produits.html" class="nav__link">Produits &amp; Services &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="produits.html">Nos produits</a>
+            <a href="developpement.html">Développement personnalisé</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="actualites.html" class="nav__link nav__link--active">Actualités</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Nous joindre</a>
+        </li>
+        <li class="nav__item"><a href="https://espace.galogix.ca/connexion" class="nav__link nav__link--portal">Espace client</a></li>
+        <li class="nav__item nav__item--lang">
+          <a href="../en/blog-plan-skidding-trails-without-walking-block.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','en')">EN</a>
+        </li>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('images/timbertrail-hero.jpg');"></div>
+    <div class="hero__content">
+      <h1>Planifier ses chemins de débardage sans marcher le bloc</h1>
+      <p>Un avant-midi de marche pour décider par où passer. Et si le calcul le faisait pendant que votre meilleur gars reste dans sa machine?</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="article fade-up">
+
+        <a href="actualites.html" class="article__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Retour aux actualités
+        </a>
+
+        <div class="article__meta">
+          <span class="article__tag">Terrain</span>
+          <span>10 septembre 2026</span>
+        </div>
+
+        <figure>
+          <img src="images/timbertrail-transmission-savoir.jpg" alt="Un forestier d'expérience montre une direction à un opérateur plus jeune, au bord d'un parterre de coupe, à côté d'un pneu de porteur cerclé de chaînes. Empilement de bois à l'arrière-plan.">
+          <figcaption>Le savoir d'un secteur se transmet encore comme ça: debout dans le bloc, en pointant. TimberTrail ne remplace pas ce moment, il en garde une trace.</figcaption>
+        </figure>
+
+        <h2>La job que personne ne compte</h2>
+        <p>Il y a une job que personne ne compte, et c'est peut-être la plus chère de la semaine.</p>
+        <p>Un gars part à pied sur le bloc, souvent le plus expérimenté de l'équipe, celui qui est capable de lire un terrain. Il marche. Il regarde où ça monte, où c'est mou, où le ruisseau passe. Il revient trois ou quatre heures plus tard avec un plan dans la tête et deux ou trois traits sur une carte pliée. Et là, seulement là, le terrain peut être commencé.</p>
+        <p>Personne ne facture cet avant-midi à personne. Il disparaît dans le coût du chantier. Mais dans une industrie où on cherche du monde toute l'année, envoyer son meilleur employé marcher pendant une demi-journée pour une décision que le terrain a déjà déterminée, c'est une drôle de façon d'utiliser quelqu'un qu'on a eu de la misère à embaucher.</p>
+        <p>C'est exactement ce problème que le partenariat entre G.A. Logix et TimberTrail vient régler.</p>
+
+        <h2>Ce que c'est, en une phrase</h2>
+        <p>TimberTrail est un algorithme de calcul de chemins de débardage, développé en Suède, que G.A. Logix a intégré directement dans ses applications de terrain. L'opérateur ouvre ForestLogix sur la tablette de la cabine, ou MobileLogix sur son téléphone, place ses piles de bois sur la carte, ajuste trois réglages, pèse sur Analyse, et les chemins proposés apparaissent.</p>
+        <p>Pas d'outil séparé à ouvrir. Pas de contrat à signer avec un autre fournisseur. C'est dans ForestLogix et dans MobileLogix, sur la même carte que vos chantiers, vos traces et vos alertes. Sur la tablette de la cabine quand vous êtes dans la machine, sur votre téléphone quand vous êtes à pied dans le bloc.</p>
+
+        <figure>
+          <img src="images/timbertrail-interface.jpg" alt="L'écran de configuration TimberTrail dans ForestLogix: les réglages Coût Pente, Coût Eau et Facteur extérieur sur quatre crans, et la carte affichant les chemins proposés en vert et les zones à risque en jaune.">
+          <figcaption>L'écran de configuration TimberTrail. À droite, les trois réglages sur quatre crans. Sur la carte, les chemins proposés: en vert le terrain favorable, en jaune les zones à risque.</figcaption>
+        </figure>
+
+        <h2>Les six étapes, telles qu'elles sont dans l'application</h2>
+        <p>L'aide intégrée du produit décrit le parcours en six étapes. On les reprend ici parce qu'elles montrent quelque chose d'important: ce n'est pas une boîte noire qui vous impose un chemin.</p>
+        <ol class="article__steps">
+          <li><strong>Placer les piles de bois.</strong> Vous touchez la carte à l'endroit où vous voulez une pile. Vous gardez le doigt dessus pour la déplacer, vous double-cliquez pour l'effacer. C'est vous qui décidez où le bois va sortir.</li>
+          <li><strong>Tracer les chemins existants</strong> (optionnel). Si vous avez déjà des chemins de débardage sur ce secteur, vous les tracez sur la carte, point par point. Le calcul en tient compte au lieu de repartir de zéro.</li>
+          <li><strong>Marquer les passages obligatoires</strong> (optionnel). Il y a un pont, une traverse, un endroit précis où le chemin doit passer, et vous êtes le seul à le savoir. Vous le marquez sur la carte. C'est là que votre connaissance du secteur entre dans l'outil.</li>
+          <li><strong>Ajuster les paramètres.</strong> Trois réglages, chacun sur quatre crans, du plus faible au plus élevé. On y revient dans une minute, c'est le coeur de l'affaire.</li>
+          <li><strong>Lancer l'analyse.</strong> Vous pesez sur Analyse. Les chemins proposés s'affichent sur la carte, en couleur.</li>
+          <li><strong>Appliquer les résultats.</strong> Si ça fait votre affaire, vous pesez sur Appliquer. Sinon, vous changez un réglage et vous relancez. Ça prend quelques secondes, pas une autre demi-journée de marche.</li>
+        </ol>
+
+        <h2>Les trois réglages, et ce qu'ils veulent dire dehors</h2>
+        <p>C'est la partie qu'un forestier comprend tout de suite, parce que ce sont exactement les trois questions qu'il se pose en marchant.</p>
+        <div class="article__table-wrap">
+        <table>
+          <thead><tr><th>Le réglage</th><th>Ce que l'aide du produit dit</th><th>Ce que ça veut dire sur le terrain</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Coût Pente</strong></td><td>« Fort pour éviter les pentes raides »</td><td>Vous acceptez un détour plutôt que de faire forcer la machine dans une côte</td></tr>
+            <tr><td><strong>Coût Eau</strong></td><td>« Fort pour éviter les cours d'eau »</td><td>Le calcul contourne l'eau au lieu de vous proposer un chemin qui la traverse</td></tr>
+            <tr><td><strong>Facteur extérieur</strong></td><td>« Fort pour rester dans votre secteur »</td><td>Le chemin ne va pas se promener chez le voisin pour sauver deux cents mètres</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Chacun a quatre positions: Ignore, Faible, Normal, Fort. Ce n'est pas un interrupteur, c'est un curseur. Sur un terrain sec en hiver, vous pouvez baisser le Coût Eau. Au dégel, vous le montez.</p>
+        <p>Il y a aussi un réglage d'avertissement, qui détermine à partir de quel niveau de risque le calcul vous signale une difficulté.</p>
+
+        <h2>Vert et jaune: comment lire ce que l'outil vous propose</h2>
+        <p>C'est là que TimberTrail se distingue d'un simple traceur de lignes. Les chemins ne s'affichent pas tous pareil:</p>
+        <ul>
+          <li><strong>En vert</strong>: bon chemin, terrain favorable.</li>
+          <li><strong>En jaune</strong>: zone à risque, à cause de la pente ou de l'eau.</li>
+        </ul>
+        <p>Autrement dit, l'outil ne se contente pas de vous donner une réponse, il vous dit où il est moins à l'aise. Un chemin jaune n'est pas une erreur, c'est un endroit où quelqu'un devrait aller voir, ou où l'opérateur devrait ralentir. Pour un contremaître qui envoie un employé moins expérimenté sur un secteur qu'il ne connaît pas, cette information vaut cher.</p>
+        <p>Et en cabine, sur la carte, l'opérateur a aussi une commande qui le dirige vers la pile de bois la plus proche. Pas besoin de se souvenir de laquelle était où.</p>
+
+        <h2>Pourquoi un algorithme suédois</h2>
+        <p>On aurait pu essayer de coder ça nous-mêmes à Plessisville. On ne l'a pas fait, et on l'assume.</p>
+        <p>Le calcul de chemins de débardage est un problème sur lequel les Scandinaves travaillent depuis longtemps, avec un volume de récolte mécanisée et une recherche forestière qui n'ont pas d'équivalent chez nous. Plutôt que de refaire moins bien, G.A. Logix a noué un partenariat avec TimberTrail et a intégré leur algorithme dans ForestLogix.</p>
+        <p>Pour vous, ça ne change rien à l'usage. Vous n'achetez pas TimberTrail à part, vous ne signez rien avec eux, vous ne gérez pas une deuxième licence. C'est une fonction de vos applications G.A. Logix, sur votre tablette comme sur votre téléphone.</p>
+        <p>Ce que ça change, c'est ce que vous pouvez répondre quand quelqu'un conteste votre plan de débardage. Le chemin n'a pas été décidé à l'oeil dans un pick-up: il a été calculé, avec des critères que vous pouvez montrer à l'écran.</p>
+
+        <h2>Le savoir qui ne repart plus avec le camion</h2>
+        <p>Il y a un aspect de cet outil dont on parle moins, et qui inquiète beaucoup de dirigeants qu'on rencontre.</p>
+        <p>Dans presque chaque entreprise forestière, il y a une personne qui sait. Elle a trente ans de métier, elle connaît chaque secteur, elle est capable de regarder un bloc et de dire par où passer. Ce savoir n'est écrit nulle part. Le jour où elle prend sa retraite, il part avec elle.</p>
+        <p>TimberTrail ne remplace pas cette personne, et il faut être clair là-dessus: un calcul ne remplace pas trente ans de terrain. Mais il rend explicites des critères qui vivaient dans une tête. Le Coût Pente, le Coût Eau, le passage obligatoire à la traverse: ce sont précisément les choses que le vétéran pesait mentalement. Une fois qu'elles sont dans l'outil, celui qui reste a un point de départ calculé plutôt qu'une page blanche.</p>
+
+        <h2>Soyons clairs sur ce que ça ne fait pas</h2>
+        <p>On préfère écrire les limites nous-mêmes.</p>
+        <div class="article__note">
+          <p><strong>Ce n'est pas une garantie du meilleur chemin dans tous les terrains.</strong> L'algorithme propose un chemin optimisé selon ses paramètres. La validation sur le terrain reste la responsabilité de l'opérateur. Un calcul ne voit pas la roche qui affleure sous la neige.</p>
+          <p><strong>Ce n'est pas un outil de conformité.</strong> Le réglage Coût Eau fait éviter les cours d'eau au calcul, ce qui est utile en planification. Ce n'est pas la même chose que démontrer qu'une bande riveraine a été respectée. Cette démonstration reste à faire, et elle relève de l'ingénieur.</p>
+          <p><strong>Ce n'est pas un produit G.A. Logix maison.</strong> C'est un partenariat, l'algorithme vient de Suède, et on l'écrit noir sur blanc plutôt que de laisser croire le contraire.</p>
+          <p><strong>On ne vous promet pas de pourcentage.</strong> Vous verrez peut-être des fournisseurs annoncer des gains de tant pour cent sur la productivité du débardage. Nous, on vous dit ce qu'on observe chez nos clients: plusieurs heures de planification terrain économisées par chantier. Le reste dépend de votre terrain, et on n'a pas de chiffre validé à vous donner.</p>
+        </div>
+
+        <h2>Pour qui ça vaut le plus</h2>
+        <p>TimberTrail fonctionne pour toutes les opérations forestières, mais il ne donne pas la même valeur partout.</p>
+        <p>C'est sur les <strong>gros chantiers</strong> qu'il est le plus fort. Plus il y a de volume de bois récolté, plus l'optimisation a de la matière pour travailler, et plus la différence entre un bon chemin et un chemin ordinaire se multiplie sur la saison. Sur un petit lot de quelques hectares, l'opérateur d'expérience va souvent arriver au même résultat en marchant vingt minutes.</p>
+        <p>Si vous opérez sur de grandes surfaces, avec plusieurs machines et des équipes qui changent, c'est là que le calcul paie.</p>
+
+        <h2>En résumé</h2>
+        <p>Trois choses à retenir:</p>
+        <ul>
+          <li>Vos chemins de débardage se calculent <strong>dans ForestLogix et dans MobileLogix</strong>, sur la tablette de la cabine comme sur votre téléphone, sans outil séparé et sans marcher le bloc.</li>
+          <li>Vous gardez le contrôle: vous placez vos piles de bois, vous marquez vos passages obligatoires, vous réglez la pente, l'eau et les limites de secteur. L'outil propose, vous appliquez.</li>
+          <li>Les chemins s'affichent <strong>en vert quand le terrain est favorable, en jaune quand il y a un risque</strong>. L'outil vous dit où il est moins sûr.</li>
+        </ul>
+
+        <h2>Passe à l'action</h2>
+        <p>Vous voulez voir ce que ça donne sur un de vos vrais secteurs, avec vos contraintes? Découvrez <a href="forestlogix.html">ForestLogix</a> et <a href="mobilelogix.html">MobileLogix</a>, ou demandez votre démonstration gratuite en <a href="contact.html">nous contactant</a>.</p>
+        <p>Conçu et assemblé à Plessisville par l'équipe de G.A. Logix, avec un algorithme qu'on est allés chercher là où il était le meilleur.</p>
+
+        <!-- ARTICLES RÉCENTS -->
+        <div class="related-posts fade-up">
+          <h3>Articles récents</h3>
+          <div class="columns columns--3">
+            <div class="related-post-card">
+              <h4><a href="blog-carte-en-ligne-partagee.html">Fini le shapefile par courriel: la carte en ligne partagée</a></h4>
+              <div class="blog-card__meta"><span>18 août 2026</span> &middot; <span>Cartographie</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-punch-forestier-terrain-paie.html">Le punch forestier, du terrain à la paie</a></h4>
+              <div class="blog-card__meta"><span>6 juillet 2026</span> &middot; <span>Terrain</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-forestlogix-donnees-gouvernementales.html">ForestLogix et les données gouvernementales</a></h4>
+              <div class="blog-card__meta"><span>24 juin 2026</span> &middot; <span>Produit</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Intéressé par nos solutions?</h2>
+      <p>Contactez-nous pour une démonstration personnalisée.</p>
+      <a href="contact.html" class="btn btn--white">Contactez-nous</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>G.A. Logix Logiciels</h4>
+          <p>Spécialistes de la conception de logiciels pour les forestiers. Nous développons des solutions innovantes pour la collecte et la gestion de données forestières.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>100 route 165 Sud<br>Plessisville, Québec<br>G6L 2Y2</p>
+          <p><a href="/fr/contact.html">Nous contacter</a></p>
+          <p><a href="tel:8192522000">819-252-2000</a></p>
+        </div>
+        <div>
+          <h4>Suivez-nous</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/GALogix" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/galogix" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@GALogix" target="_blank" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 G.A. Logix Logiciels inc. Tous droits réservés. &nbsp;|&nbsp; <a href="/fr/politique-confidentialite.html">Politique de confidentialité</a> &nbsp;|&nbsp; <a href="#" onclick="if(window.galogixOpenCookieSettings)window.galogixOpenCookieSettings();return false;">Gérer mes cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav').classList.toggle('nav--open');
+      if (!document.getElementById('nav').classList.contains('nav--open')) {
+        document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+        document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+      }
+    });
+
+    // Mobile dropdown toggle
+    (function() {
+      var isMobile = function() { return window.matchMedia('(max-width: 75em)').matches; };
+      document.querySelectorAll('.nav__item').forEach(function(item) {
+        var dropdown = item.querySelector('.nav__dropdown');
+        if (!dropdown) return;
+        var link = item.querySelector('.nav__link');
+        link.addEventListener('click', function(e) {
+          if (!isMobile()) return;
+          if (!dropdown.classList.contains('nav__dropdown--open')) {
+            document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+            document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+            dropdown.classList.add('nav__dropdown--open');
+            link.classList.add('nav__link--expanded');
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+    window.addEventListener('scroll', function() {
+      document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

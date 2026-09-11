@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<script src="/js/consent.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan your skidding trails without walking the block | G.A. Logix</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="description" content="Half a morning on foot to decide where the wood comes out. TimberTrail computes your skidding trails inside ForestLogix and MobileLogix, on tablet and on phone.">
+  <meta property="og:title" content="Plan your skidding trails without walking the block | G.A. Logix">
+  <meta property="og:description" content="The TimberTrail engine computes your skidding trails using slope, water and sector limits as criteria. Inside ForestLogix and MobileLogix.">
+  <meta property="og:image" content="https://www.galogix.ca/en/images/timbertrail-hero.jpg">
+  <meta property="og:url" content="https://www.galogix.ca/en/blog-plan-skidding-trails-without-walking-block.html">
+  <link rel="canonical" href="https://www.galogix.ca/en/blog-plan-skidding-trails-without-walking-block.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html">
+  <link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-plan-skidding-trails-without-walking-block.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Plan your skidding trails without walking the block",
+    "datePublished": "2026-09-10",
+    "image": "https://www.galogix.ca/en/images/timbertrail-hero.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "G.A. Logix Logiciels inc.",
+      "url": "https://www.galogix.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.galogix.ca/images/logo-ga.png"
+      }
+    },
+    "mainEntityOfPage": "https://www.galogix.ca/en/blog-plan-skidding-trails-without-walking-block.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.96rem; }
+    .article th, .article td { border:1px solid #e5e0cd; padding:10px 14px; text-align:left; vertical-align:top; }
+    .article th { background:#1E3A5F; color:#fff; font-weight:600; }
+    .article tbody tr:nth-child(even){ background:#faf8f1; }
+    .article__table-wrap { overflow-x:auto; }
+    .article figure { margin:2rem 0; }
+    .article figure img { width:100%; border-radius:6px; display:block; }
+    .article figcaption { font-size:0.9rem; color:#6b6858; margin-top:0.6rem; font-style:italic; text-align:center; }
+    .article__steps { counter-reset:etape; list-style:none; padding:0; margin:1.5rem 0; }
+    .article__steps li { counter-increment:etape; position:relative; padding:0 0 1.1rem 3.1rem; }
+    .article__steps li::before { content:counter(etape); position:absolute; left:0; top:-2px;
+      width:2.1rem; height:2.1rem; border-radius:50%; background:#1E3A5F; color:#fff;
+      font-weight:700; display:flex; align-items:center; justify-content:center; font-size:0.95rem; }
+    .article__note { border-left:4px solid #1E3A5F; background:#faf8f1; padding:1rem 1.3rem; margin:1.8rem 0; border-radius:0 4px 4px 0; }
+    .article__note p:last-child { margin-bottom:0; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo-ga.png" alt="G.A. Logix">G.A. Logix Logiciels</a>
+      <nav class="nav" id="nav">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="a-propos.html" class="nav__link">About Us &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="membres.html">Founding Members</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="solutions.html" class="nav__link">Solutions &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="forestlogix.html">ForestLogix</a>
+            <a href="mobilelogix.html">MobileLogix</a>
+            <a href="synclogix.html">SyncLogix</a>
+            <a href="tracklogix.html">TrackLogix</a>
+            <a href="siglogix.html">SIGLogix</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="produits.html" class="nav__link">Products &amp; Services &#9662;</a>
+          <div class="nav__dropdown">
+            <a href="produits.html">Our Products</a>
+            <a href="developpement.html">Custom Development</a>
+          </div>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__item">
+          <a href="actualites.html" class="nav__link nav__link--active">News</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Contact Us</a>
+        </li>
+        <li class="nav__item"><a href="https://espace.galogix.ca/connexion" class="nav__link nav__link--portal">Client portal</a></li>
+        <li class="nav__item nav__item--lang">
+          <a href="../fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html" class="nav__link nav__link--lang" onclick="localStorage.setItem('galogix-lang','fr')">FR</a>
+        </li>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('images/timbertrail-hero.jpg');"></div>
+    <div class="hero__content">
+      <h1>Plan your skidding trails without walking the block</h1>
+      <p>Half a morning on foot to decide where to go. What if the computation did it while your best operator stayed in his machine?</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="article fade-up">
+
+        <a href="actualites.html" class="article__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+          Back to News
+        </a>
+
+        <div class="article__meta">
+          <span class="article__tag">Field</span>
+          <span>September 10, 2026</span>
+        </div>
+
+        <figure>
+          <img src="images/timbertrail-transmission-savoir.jpg" alt="An experienced forestry worker points out a direction to a younger operator at the edge of a cut block, next to a forwarder tyre fitted with chains. Stacked logs in the background.">
+          <figcaption>Sector knowledge still gets passed on this way: standing in the block, pointing. TimberTrail does not replace that moment, it keeps a record of it.</figcaption>
+        </figure>
+
+        <h2>The job nobody counts</h2>
+        <p>There is one job nobody counts, and it may be the most expensive one of the week.</p>
+        <p>Somebody heads out on foot across the block, usually the most experienced person on the crew, the one who can read terrain. He walks. He looks at where it climbs, where it is soft, where the stream runs. He comes back three or four hours later with a plan in his head and two or three lines on a folded map. And only then can the block be started.</p>
+        <p>Nobody bills that half morning to anybody. It disappears into the cost of the job. But in an industry that is short of people all year long, sending your best employee walking for half a day to make a decision the terrain has already determined is a strange way to use somebody who was hard to hire.</p>
+        <p>That is exactly what the partnership between G.A. Logix and TimberTrail solves.</p>
+
+        <h2>What it is, in one sentence</h2>
+        <p>TimberTrail is a skidding trail computation engine, developed in Sweden, that G.A. Logix has integrated directly into its field applications. The operator opens ForestLogix on the cab tablet, or MobileLogix on a phone, places the log piles on the map, adjusts three settings, presses Analyze, and the proposed trails appear.</p>
+        <p>No separate tool to open. No contract to sign with another vendor. It is inside ForestLogix and inside MobileLogix, on the same map as your sites, your tracks and your alerts. On the cab tablet when you are in the machine, on your phone when you are on foot in the block.</p>
+
+        <figure>
+          <img src="images/timbertrail-interface.jpg" alt="The TimberTrail configuration screen inside ForestLogix: the Slope Cost, Water Cost and Outside Factor settings on four positions, and the map showing proposed trails in green and risk zones in yellow.">
+          <figcaption>The TimberTrail configuration screen. On the right, the three settings on four positions. On the map, the proposed trails: green for favourable terrain, yellow for risk zones.</figcaption>
+        </figure>
+
+        <h2>The six steps, exactly as they appear in the application</h2>
+        <p>The product's built-in help describes the flow in six steps. We repeat them here because they show something important: this is not a black box that hands you a trail and expects you to take it.</p>
+        <ol class="article__steps">
+          <li><strong>Place the log piles.</strong> You tap the map where you want a pile. Hold to drag it, double-tap to delete it. You decide where the wood comes out.</li>
+          <li><strong>Trace the existing trails</strong> (optional). If there are already skidding trails on this sector, you trace them on the map, point by point. The computation accounts for them instead of starting from nothing.</li>
+          <li><strong>Mark the mandatory passages</strong> (optional). There is a bridge, a crossing, one exact spot the trail has to go through, and you are the only one who knows it. You mark it on the map. That is where your knowledge of the sector enters the tool.</li>
+          <li><strong>Adjust the parameters.</strong> Three settings, each with four positions, from the lowest to the highest. More on that in a moment, it is the heart of the matter.</li>
+          <li><strong>Run the analysis.</strong> You press Analyze. The proposed trails appear on the map, in colour.</li>
+          <li><strong>Apply the results.</strong> If it suits you, press Apply. If not, change a setting and run it again. That takes seconds, not another half day on foot.</li>
+        </ol>
+
+        <h2>The three settings, and what they mean outside</h2>
+        <p>This is the part a forestry person understands immediately, because these are exactly the three questions he asks himself while walking.</p>
+        <div class="article__table-wrap">
+        <table>
+          <thead><tr><th>The setting</th><th>What the product help says</th><th>What it means on the ground</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Slope Cost</strong></td><td>"Set to High to avoid steep slopes"</td><td>You accept a detour rather than making the machine strain up a grade</td></tr>
+            <tr><td><strong>Water Cost</strong></td><td>"Set to High to avoid waterways"</td><td>The computation routes around water instead of proposing a crossing</td></tr>
+            <tr><td><strong>Outside Factor</strong></td><td>"Set to High to stay within your sector"</td><td>The trail will not wander onto the neighbour's land to save two hundred metres</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Each one has four positions: Ignore, Low, Normal, High. It is not a switch, it is a dial. On dry ground in winter you can lower Water Cost. During spring breakup you raise it.</p>
+        <p>There is also a warning setting, which determines the risk level at which the computation flags a difficulty for you.</p>
+
+        <h2>Green and yellow: how to read what the tool proposes</h2>
+        <p>This is where TimberTrail separates itself from a simple line drawing tool. The trails do not all display the same way:</p>
+        <ul>
+          <li><strong>Green</strong>: good trail, favourable terrain.</li>
+          <li><strong>Yellow</strong>: risk zone, because of slope or water.</li>
+        </ul>
+        <p>In other words, the tool does not just hand you an answer, it tells you where it is less comfortable. A yellow trail is not an error, it is a place where somebody should go look, or where the operator should slow down. For a foreman sending a less experienced employee onto a sector he does not know, that information is worth a lot.</p>
+        <p>And in the cab, on the map, the operator also has a command that directs him to the nearest log pile. No need to remember which one was where.</p>
+
+        <h2>Why a Swedish algorithm</h2>
+        <p>We could have tried to code this ourselves in Plessisville. We did not, and we own that.</p>
+        <p>Skidding trail computation is a problem the Scandinavians have worked on for a long time, with a volume of mechanized harvesting and a body of forestry research that has no equivalent here. Rather than build a weaker version, G.A. Logix partnered with TimberTrail and integrated their engine into ForestLogix.</p>
+        <p>For you, none of that changes the usage. You do not buy TimberTrail separately, you sign nothing with them, you do not manage a second licence. It is a function of your G.A. Logix applications, on your tablet and on your phone.</p>
+        <p>What it does change is what you can answer when somebody challenges your skidding plan. The trail was not decided by eye from a pickup truck: it was computed, with criteria you can show on screen.</p>
+
+        <h2>The knowledge that no longer leaves with the truck</h2>
+        <p>There is one aspect of this tool that gets talked about less, and that worries a lot of the owners we meet.</p>
+        <p>In almost every forestry company, there is one person who knows. Thirty years in the trade, knows every sector, can look at a block and say where to go. That knowledge is written down nowhere. The day that person retires, it leaves with them.</p>
+        <p>TimberTrail does not replace that person, and we should be clear about it: a computation does not replace thirty years in the field. But it makes explicit a set of criteria that used to live in someone's head. Slope Cost, Water Cost, the mandatory passage at the crossing: those are precisely the things the veteran weighed mentally. Once they are in the tool, whoever remains has a computed starting point instead of a blank page.</p>
+
+        <h2>Let us be clear about what this does not do</h2>
+        <p>We would rather write the limits ourselves.</p>
+        <div class="article__note">
+          <p><strong>It is not a guarantee of the best trail in every terrain.</strong> The engine proposes an optimized trail according to its parameters. Validation in the field remains the operator's responsibility. A computation cannot see the rock outcrop under the snow.</p>
+          <p><strong>It is not a compliance tool.</strong> The Water Cost setting makes the computation avoid waterways, which is useful in planning. That is not the same thing as demonstrating that a riparian buffer was respected. That demonstration still has to be made, and it belongs to the engineer.</p>
+          <p><strong>It is not an in-house G.A. Logix product.</strong> It is a partnership, the engine comes from Sweden, and we write that plainly rather than let anyone assume otherwise.</p>
+          <p><strong>We are not promising you a percentage.</strong> You may see vendors advertising gains of so many percent on skidding productivity. What we tell you is what we observe with our customers: several hours of field planning saved per job site. The rest depends on your terrain, and we have no validated figure to give you.</p>
+        </div>
+
+        <h2>Where it pays the most</h2>
+        <p>TimberTrail works for all forestry operations, but it does not deliver the same value everywhere.</p>
+        <p>It is strongest on <strong>large job sites</strong>. The more harvested volume there is, the more material the optimization has to work with, and the more the difference between a good trail and an ordinary one compounds over a season. On a small woodlot of a few hectares, the experienced operator will often reach the same result after twenty minutes on foot.</p>
+        <p>If you operate over large areas, with several machines and crews that change, that is where the computation pays.</p>
+
+        <h2>In short</h2>
+        <p>Three things to remember:</p>
+        <ul>
+          <li>Your skidding trails are computed <strong>inside ForestLogix and inside MobileLogix</strong>, on the cab tablet and on your phone, with no separate tool and no walking the block.</li>
+          <li>You stay in control: you place the log piles, you mark the mandatory passages, you set slope, water and sector limits. The tool proposes, you apply.</li>
+          <li>Trails display <strong>green where the terrain is favourable, yellow where there is a risk</strong>. The tool tells you where it is less certain.</li>
+        </ul>
+
+        <h2>Take action</h2>
+        <p>Want to see what that looks like on one of your real sectors, with your constraints? Take a look at <a href="forestlogix.html">ForestLogix</a> and <a href="mobilelogix.html">MobileLogix</a>, or book your free demo by <a href="contact.html">contacting us</a>.</p>
+        <p>Designed and assembled in Plessisville by the G.A. Logix team, with an engine we went and found where it was best.</p>
+
+        <!-- RECENT ARTICLES -->
+        <div class="related-posts fade-up">
+          <h3>Recent articles</h3>
+          <div class="columns columns--3">
+            <div class="related-post-card">
+              <h4><a href="blog-shared-online-map-layer.html">No more shapefiles by email: the shared online map</a></h4>
+              <div class="blog-card__meta"><span>August 18, 2026</span> &middot; <span>Mapping</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-forestry-time-tracking-payroll.html">The forestry time clock, from field to payroll</a></h4>
+              <div class="blog-card__meta"><span>July 6, 2026</span> &middot; <span>Field</span></div>
+            </div>
+            <div class="related-post-card">
+              <h4><a href="blog-forestlogix-donnees-gouvernementales.html">ForestLogix and government data</a></h4>
+              <div class="blog-card__meta"><span>June 24, 2026</span> &middot; <span>Product</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container fade-up">
+      <h2>Interested in our solutions?</h2>
+      <p>Contact us for a personalized demonstration.</p>
+      <a href="contact.html" class="btn btn--white">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>G.A. Logix Logiciels</h4>
+          <p>Specialists in software design for forestry professionals. We develop innovative solutions for the collection and management of forestry data.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>100 route 165 Sud<br>Plessisville, Quebec<br>G6L 2Y2</p>
+          <p><a href="/en/contact.html">Contact us</a></p>
+          <p><a href="tel:8192522000">819-252-2000</a></p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social">
+            <a href="https://www.facebook.com/GALogix" target="_blank" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/galogix" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@GALogix" target="_blank" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        &copy; 2026 G.A. Logix Logiciels inc. All rights reserved. &nbsp;|&nbsp; <a href="/en/privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" onclick="if(window.galogixOpenCookieSettings)window.galogixOpenCookieSettings();return false;">Manage my cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('nav').classList.toggle('nav--open');
+      if (!document.getElementById('nav').classList.contains('nav--open')) {
+        document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+        document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+      }
+    });
+
+    // Mobile dropdown toggle
+    (function() {
+      var isMobile = function() { return window.matchMedia('(max-width: 75em)').matches; };
+      document.querySelectorAll('.nav__item').forEach(function(item) {
+        var dropdown = item.querySelector('.nav__dropdown');
+        if (!dropdown) return;
+        var link = item.querySelector('.nav__link');
+        link.addEventListener('click', function(e) {
+          if (!isMobile()) return;
+          if (!dropdown.classList.contains('nav__dropdown--open')) {
+            document.querySelectorAll('.nav__dropdown--open').forEach(function(d) { d.classList.remove('nav__dropdown--open'); });
+            document.querySelectorAll('.nav__link--expanded').forEach(function(l) { l.classList.remove('nav__link--expanded'); });
+            dropdown.classList.add('nav__dropdown--open');
+            link.classList.add('nav__link--expanded');
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+    window.addEventListener('scroll', function() {
+      document.getElementById('header').classList.toggle('header--scrolled', window.scrollY > 50);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
