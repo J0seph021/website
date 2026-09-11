@@ -243,10 +243,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-georeferenced-pdf-field-basemap.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-planifier-chemins-debardage-sans-marcher-bloc.html"/>
@@ -510,6 +511,14 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-punch-forestier-terrain-paie.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-forestry-time-tracking-payroll.html"/>
+  </url>
+  <url>
+    <loc>https://www.galogix.ca/en/blog-georeferenced-pdf-field-basemap.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.galogix.ca/fr/blog-pdf-georeference-carte-terrain.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.galogix.ca/en/blog-georeferenced-pdf-field-basemap.html"/>
   </url>
   <url>
     <loc>https://www.galogix.ca/en/blog-gps-connectivite-2026.html</loc>
