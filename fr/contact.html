@@ -2,6 +2,7 @@
 <html lang="fr-CA">
 <head>
 <script src="/js/consent.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nous joindre | G.A. Logix</title>
@@ -254,6 +255,9 @@
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
 
+          <!-- Vérification anti-robot (Cloudflare Turnstile), contrôlée par le CRM -->
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAFLP5asU6B3UbkNt" data-language="fr" data-action="contact" style="display:flex;justify-content:center;margin-top:1.5rem;"></div>
+
           <div class="form-actions">
             <button type="submit" class="btn btn--primary" id="submitBtn">Envoyer la demande</button>
           </div>
@@ -411,6 +415,15 @@
         return valid;
       }
 
+      // Message sous le bouton (retiré par validateForm au prochain envoi).
+      function afficherErreurCaptcha(texte) {
+        var err = document.createElement('div');
+        err.className = 'form-error';
+        err.style.textAlign = 'center';
+        err.textContent = texte;
+        submitBtn.parentNode.appendChild(err);
+      }
+
       form.addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -418,6 +431,14 @@
         if (document.getElementById('website').value) return;
 
         if (!validateForm()) return;
+
+        // Jeton anti-robot (Turnstile) : sans lui, le CRM refuse la demande.
+        var captchaInput = form.querySelector('[name="cf-turnstile-response"]');
+        var captcha = captchaInput ? captchaInput.value : '';
+        if (!captcha && window.turnstile) {
+          afficherErreurCaptcha('La vérification anti-robot n\'est pas terminée. Patientez quelques secondes, puis réessayez.');
+          return;
+        }
 
         var requestType = form.querySelector('input[name="requestType"]:checked').value;
 
@@ -431,7 +452,8 @@
           clientType: document.getElementById('clientType').value,
           product: requestType === 'demo' ? document.getElementById('product').value : '',
           message: document.getElementById('message').value.trim(),
-          source: 'website-fr'
+          source: 'website-fr',
+          captcha: captcha
         };
 
         submitBtn.classList.add('btn--loading');
@@ -443,6 +465,15 @@
           body: JSON.stringify(data)
         })
         .then(function(res) {
+          // Vérification anti-robot refusée : on le dit et on n'utilise PAS
+          // la solution de secours par courriel (elle laisserait passer le robot).
+          if (res.status === 400) {
+            return res.json().catch(function() { return {}; }).then(function(body) {
+              var err = new Error('Erreur serveur');
+              if (body && body.code === 'captcha') err.captcha = true;
+              throw err;
+            });
+          }
           if (!res.ok) throw new Error('Erreur serveur');
           return res.json();
         })
@@ -458,7 +489,12 @@
             });
           }
         })
-        .catch(function() {
+        .catch(function(erreur) {
+          if (erreur && erreur.captcha) {
+            afficherErreurCaptcha('La vérification anti-robot a échoué. Réessayez, ou écrivez-nous à info@galogix.com.');
+            if (window.turnstile) window.turnstile.reset();
+            return;
+          }
           // Fallback 1 : envoyer silencieusement via Web3Forms
           var typeLabel = data.requestType === 'demo' ? 'Demande de démonstration' : 'Contact général';
           return fetch('https://api.web3forms.com/submit', {

@@ -2,6 +2,7 @@
 <html lang="en-CA">
 <head>
 <script src="/js/consent.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact G.A. Logix: Demo and Support</title>
@@ -254,6 +255,9 @@
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
 
+          <!-- Bot check (Cloudflare Turnstile), verified by the CRM -->
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAFLP5asU6B3UbkNt" data-language="en" data-action="contact" style="display:flex;justify-content:center;margin-top:1.5rem;"></div>
+
           <div class="form-actions">
             <button type="submit" class="btn btn--primary" id="submitBtn">Send Request</button>
           </div>
@@ -409,6 +413,15 @@
         return valid;
       }
 
+      // Message under the button (cleared by validateForm on the next submit).
+      function showCaptchaError(text) {
+        var err = document.createElement('div');
+        err.className = 'form-error';
+        err.style.textAlign = 'center';
+        err.textContent = text;
+        submitBtn.parentNode.appendChild(err);
+      }
+
       form.addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -416,6 +429,14 @@
         if (document.getElementById('website').value) return;
 
         if (!validateForm()) return;
+
+        // Bot check token (Turnstile): the CRM refuses the request without it.
+        var captchaInput = form.querySelector('[name="cf-turnstile-response"]');
+        var captcha = captchaInput ? captchaInput.value : '';
+        if (!captcha && window.turnstile) {
+          showCaptchaError('The bot check is not finished yet. Please wait a few seconds, then try again.');
+          return;
+        }
 
         var requestType = form.querySelector('input[name="requestType"]:checked').value;
 
@@ -429,7 +450,8 @@
           clientType: document.getElementById('clientType').value,
           product: requestType === 'demo' ? document.getElementById('product').value : '',
           message: document.getElementById('message').value.trim(),
-          source: 'website-en'
+          source: 'website-en',
+          captcha: captcha
         };
 
         submitBtn.classList.add('btn--loading');
@@ -441,6 +463,15 @@
           body: JSON.stringify(data)
         })
         .then(function(res) {
+          // Bot check refused: say so and do NOT use the email fallback
+          // (it would let the bot through).
+          if (res.status === 400) {
+            return res.json().catch(function() { return {}; }).then(function(body) {
+              var err = new Error('Server error');
+              if (body && body.code === 'captcha') err.captcha = true;
+              throw err;
+            });
+          }
           if (!res.ok) throw new Error('Server error');
           return res.json();
         })
@@ -455,7 +486,12 @@
             });
           }
         })
-        .catch(function() {
+        .catch(function(error) {
+          if (error && error.captcha) {
+            showCaptchaError('The bot check failed. Please try again, or write to us at info@galogix.com.');
+            if (window.turnstile) window.turnstile.reset();
+            return;
+          }
           // Fallback 1: send silently via Web3Forms
           var typeLabel = data.requestType === 'demo' ? 'Demo Request' : 'General Inquiry';
           return fetch('https://api.web3forms.com/submit', {
